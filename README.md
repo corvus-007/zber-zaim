@@ -1,4 +1,4 @@
-# ZVBER-ZAIM
+# ZBER-ZAIM
 Структура:
 ```
 app/
