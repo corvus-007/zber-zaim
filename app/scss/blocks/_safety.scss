@@ -1,0 +1,107 @@
+.safety {
+
+}
+
+.safety__title {
+  margin-bottom: rem($grid-gutter-width * 2);
+}
+
+.safety__list {
+  @include clear-list();
+
+  @media #{$sm-width} {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.safety__item {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+  margin-bottom: $grid-gutter-width;
+  text-align: center;
+  font-size: rem($font-size--smaller);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: rem(266);
+    height: rem(266);
+    margin: auto;
+    border-radius: 50%;
+    z-index: -1;
+    background-color: $white-color;
+    transition: transform ($duration * 1.5);
+  }
+
+  &:hover,
+  &:focus {
+    &::before {
+      transition-duration: ($duration * 1.5);
+      transition-timing-function: cubic-bezier(.61,1.19,.61,1.19);
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+
+  @media #{$sm-width} and #{$sm-only} {
+    width: calc((100% - #{rem($grid-gutter-width)}) / 2);
+    margin-right: rem($grid-gutter-width);
+
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+
+  @media #{$md-width} and #{$lg-only} {
+    width: calc((100% - 2 * #{rem($grid-gutter-width)}) / 3);
+    margin-right: rem($grid-gutter-width);
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+
+  @media #{$xl-width} {
+    width: calc((100% - 4 * #{rem($grid-gutter-width)}) / 5);
+    margin-right: rem($grid-gutter-width);
+
+    &:nth-child(5n) {
+      margin-right: 0;
+    }
+  }
+}
+
+.safety__icon {
+  margin-bottom: 1rem;
+  background-color: #9896F1;
+}
+
+.safety__caption {
+  display: block;
+  max-width: 220px;
+  min-height: calc(1.3 * 2em);
+  margin-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  font-size: $font-size;
+  line-height: 1.3;
+  color: $black-color;
+}
+
+.safety__description {
+  max-width: 220px;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: auto;
+  color: $base-color;
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,23 @@
+.logo {
+  flex-shrink: 0;
+}
+
+.logo__link {
+
+}
+
+.logo__text {
+  display: block;
+  margin-left: 40px;
+  max-width: 200px;
+  font-size: rem($font-size--smaller);
+  opacity: 0.5;
+
+  @media #{$xs-only} {
+    display: none;
+  }
+}
+
+.logo__image {
+
+}

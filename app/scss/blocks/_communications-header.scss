@@ -1,0 +1,33 @@
+.communications-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media #{$sm-width} {
+    align-items: flex-end;
+  }
+}
+
+.communications-header__phone {
+  font-size: rem(24);
+  white-space: nowrap;
+
+  @media #{$xs-only} {
+    display: none;
+  }
+}
+
+.communications-header__callback {
+
+  @media #{$xs-only} {
+    font-size: 0;
+  }
+}
+
+.communications-header__callback-icon {
+  background-color: currentColor;
+
+  @media #{$sm-width} {
+    display: none;
+  }
+}

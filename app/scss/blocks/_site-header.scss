@@ -1,0 +1,28 @@
+.site-header {
+  padding-top: rem($grid-gutter-width);
+  padding-bottom: rem($grid-gutter-width);
+}
+
+.site-header__inner {
+  @include make-container();
+
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+
+  @media #{$xs-only} {
+  }
+}
+
+.site-header__column {
+  margin-right: 1.5rem;
+
+    &:last-child {
+      margin-right: 0;
+  }
+}
+
+.site-header__logo {
+  flex-shrink: 0;
+}

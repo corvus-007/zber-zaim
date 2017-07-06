@@ -1,0 +1,126 @@
+.cta {
+  background-color: $gray-color-236;
+  // background-color: #3EC1D3;
+
+  @media #{$lg-width} {
+    &--pull-left {
+      background-color: transparent;
+    }
+
+    &--pull-right {
+      background-color: transparent;
+    }
+  }
+
+
+}
+
+.cta__inner {
+  @include make-container();
+}
+
+.cta__frame {
+  position: relative;
+  max-width: rem(920);
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: rem($grid-gutter-width);
+  padding-bottom: rem($grid-gutter-width);
+  background-color: $gray-color-236;
+  box-sizing: border-box;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 50vw;
+    background-color: inherit;
+  }
+
+  @media #{$lg-width} {
+    .cta--pull-left & {
+      margin-left: 0;
+      padding-right: 120px;
+      border-radius: 0 500px 500px 0;
+
+      &::before {
+        content: "";
+        right: 100%;
+      }
+    }
+
+    .cta--pull-right & {
+      margin-right: 0;
+      padding-left: 120px;
+      border-radius: 500px 0 0 500px;
+
+      &::before {
+        content: "";
+        left: 100%;
+      }
+    }
+  }
+}
+
+.cta__title {
+  margin: 0;
+  margin-bottom: 0.2em;
+  font-weight: 500;
+  font-size: rem($font-size-title);
+  line-height: 1.3;
+}
+
+.cta__form {
+  margin-top: 2rem;
+
+  .form-label {
+    @include visuallyhidden();
+  }
+
+  @media #{$sm-width} {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: rem(-$grid-gutter-width / 2);
+    margin-right: rem(-$grid-gutter-width / 2);
+  }
+}
+
+.cta__form-column {
+  margin-bottom: rem($grid-gutter-width);
+
+  &--submit {
+    text-align: center;
+  }
+
+  @media #{$sm-width} {
+    padding-left: rem($grid-gutter-width / 2);
+    padding-right: rem($grid-gutter-width / 2);
+    box-sizing: border-box;
+    flex-grow: 1;
+  }
+
+  @media #{$sm-width} and #{$sm-only} {
+    &--field {
+      width: 50%;
+    }
+  }
+
+  @media #{$md-width} {
+    width: percentage(1 / 3);
+    margin-bottom: rem(20);
+  }
+}
+
+.cta__form-submit {
+  @media #{$md-width} {
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    min-width: auto;
+  }
+}
+
+.cta__note {
+  font-size: rem($font-size--small);
+  opacity: 0.6;
+}

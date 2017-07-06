@@ -1,0 +1,59 @@
+.shareholders-targets {
+  @include clear-list();
+
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem($grid-gutter-width / 2);
+    text-transform: lowercase;
+
+    &::before {
+      content: "";
+      display: block;
+      flex-shrink: 0;
+      width: rem(54);
+      height: rem(54);
+      margin-right: rem($grid-gutter-width / 2);
+        background-color: #3FBAC2;
+        border-radius: 50%;
+    }
+  }
+
+  @media #{$sm-width} {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: rem($grid-gutter-width * 1.5);
+
+      &::before {
+        margin-right: 0;
+        margin-bottom: 1rem;
+      }
+    }
+  }
+
+  @media #{$sm-width} and #{$sm-only} {
+    li {
+      width: calc((100% - #{rem($grid-gutter-width)}) / 2);
+      margin-right: rem($grid-gutter-width);
+
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  @media #{$md-width} {
+    li {
+      width: calc((100% - 3 * #{rem($grid-gutter-width)}) / 4);
+      margin-right: rem($grid-gutter-width);
+
+      &:nth-child(4n) {
+        margin-right: 0;
+      }
+    }
+  }
+}

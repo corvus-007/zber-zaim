@@ -1,0 +1,52 @@
+.intro {
+
+}
+
+.intro__inner {
+
+}
+
+.intro__title {
+  text-align: left;
+
+  @media #{$md-width} {
+    max-width: 80%;
+  }
+
+  @media #{$lg-width} {
+    max-width: 60%;
+  }
+}
+
+.intro__content {
+  @media #{$md-width} {
+    display: flex;
+  }
+}
+
+.intro__column {
+  margin-bottom: rem($grid-gutter-width);
+
+  @media #{$md-width} {
+    width: 50%;
+    margin-bottom: 0;
+    margin-right: rem($grid-gutter-width);
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+}
+
+.intro__text {
+
+}
+
+.intro__image {
+  text-align: center;
+
+  @media #{$md-width} {
+    margin-top: -3rem;
+  }
+}
