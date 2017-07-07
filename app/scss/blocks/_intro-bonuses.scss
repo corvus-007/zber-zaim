@@ -1,0 +1,125 @@
+.intro-bonuses {
+  padding-top: rem($grid-gutter-width * 2);
+  text-align: center;
+}
+
+.intro-bonuses__title {
+  @include make-fat-title($font-size);
+
+  margin-bottom: rem($grid-gutter-width * 2);
+  color: $white-color;
+
+  span {
+    padding: 0.3rem;
+    line-height: 2;
+    background-color: $secondary-color;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  @media #{$md-width} {
+    display: inline-flex;
+
+    &::before {
+      content: "";
+      width: rem(50);
+      background-image: linear-gradient(45deg, transparent 50%, $secondary-color 0), linear-gradient(135deg, transparent 50%, $secondary-color 0);
+      background-repeat: no-repeat;
+    }
+
+    &::after {
+      content: "";
+      width: rem(50);
+      background-image: linear-gradient(-45deg, transparent 50%, $secondary-color 0), linear-gradient(-135deg, transparent 50%, $secondary-color 0);
+      background-repeat: no-repeat;
+    }
+
+    span {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+.intro-bonuses__list {
+  @include clear-list();
+
+  @media #{$md-width} {
+    display: flex;
+  }
+}
+
+.intro-bonuses__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: rem($grid-gutter-width);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    content: "";
+    width: rem(100);
+    height: rem(100);
+    flex-shrink: 0;
+    margin-bottom: rem(20);
+    border-radius: 50%;
+    background: $white-color url("images/gift.svg") no-repeat center / 70%;
+  }
+
+  @media #{$sm-width} {
+    flex-direction: row;
+    text-align: left;
+
+    &::before {
+      margin-right: rem($grid-gutter-width);
+      margin-bottom: 0;
+    }
+  }
+
+  @media #{$md-width} {
+    flex-direction: column;
+    width: calc((100% - 2 * #{rem(40)}) / 3);
+    margin-right: rem(40);
+    margin-bottom: 0;
+    text-align: center;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &::before {
+      margin-right: 0;
+      margin-bottom: rem(20);
+    }
+  }
+
+  @media #{$lg-width} {
+    width: calc((100% - 2 * #{rem(50)}) / 3);
+    margin-right: rem(50);
+  }
+
+  @media #{$xl-width} {
+    width: calc((100% - 2 * #{rem(70)}) / 3);
+    margin-right: rem(70);
+  }
+}
+
+.intro-bonuses__text {
+
+}
+
+.intro-bonuses__caption {
+  display: block;
+  margin-bottom: rem(20);
+}
+
+.intro-bonuses__description {
+  font-size: rem($font-size--smaller);
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}

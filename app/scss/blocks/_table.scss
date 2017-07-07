@@ -2,7 +2,15 @@ table {
   max-width: 100%;
   width: 100%;
   border-collapse: collapse;
+  word-break: break-all;
   cursor: default;
+
+  @media #{$md-width} {
+    margin: -10px;
+    border-collapse: separate;
+    border-spacing: 10px;
+    word-break: normal;
+  }
 }
 
 caption {
@@ -14,28 +22,17 @@ caption {
 
 th,
 td {
-  border: 1px solid #364f6b;
-  padding: rem(8);
+  padding: 8px;
   text-align: left;
   transition: ($duration / 2);
-}
+  border-radius: $border-radius;
+  background-color: $gray-color-246;
 
-thead {
-  th,
-  td {
-    border-bottom-width: 2px;
-    text-align: left;
+  @media #{$sm-only} {
+    border: 1px solid $gray-color-210;
   }
-}
 
-tbody {
-  vertical-align: top;
-  tr {
-    &:hover {
-      th,
-      td {
-        background-color: #f5f5f5;
-      }
-    }
+  @media #{$md-width} {
+    padding: 10px;
   }
 }

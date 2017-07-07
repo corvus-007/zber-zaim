@@ -1,5 +1,15 @@
 .intro {
+  padding-bottom: rem($grid-gutter-width * 5);
+  background-color: $white-color;
+  background-image: url("images/bg-wave-section-gray.svg"), url("images/bg-wave-section-gray--reverse-x.svg");
+  background-repeat: no-repeat;
+  background-position: 100% 0, 100% 100%;
+  background-size: contain;
 
+  @media #{$xxl-width} {
+    background-position: 100% 0, 100% 140%;
+    background-size: contain, 132%;
+  }
 }
 
 .intro__inner {
@@ -15,10 +25,13 @@
 
   @media #{$lg-width} {
     max-width: 60%;
+    margin-left: 0;
   }
 }
 
 .intro__content {
+  margin-bottom: rem($grid-gutter-width * 2.5);
+
   @media #{$md-width} {
     display: flex;
   }
@@ -36,7 +49,6 @@
       margin-right: 0;
     }
   }
-
 }
 
 .intro__text {
@@ -49,4 +61,54 @@
   @media #{$md-width} {
     margin-top: -3rem;
   }
+}
+
+.intro__table {
+  text-align: center;
+
+  th,
+  td {
+    text-align: center;
+  }
+
+  thead {
+    b {
+      display: block;
+      font-size: 600;
+      color: $accent-color;
+    }
+  }
+
+  tbody {
+    font-size: rem($font-size--smaller);
+
+    th {
+      font-weight: 600;
+    }
+  }
+}
+
+.intro__table-accent {
+  background-color: $accent-color;
+}
+
+.intro__note-sign {
+  color: $danger-color;
+}
+
+.intro__footnote-table {
+  margin-top: 0.5rem;
+  font-size: rem($font-size--smaller);
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
+}
+
+.intro__divider-subsection {
+  margin-top: rem($grid-gutter-width * 1.5);
+  margin-bottom: rem($grid-gutter-width * 1.5);
+  height: 1px;
+  background-color: $gray-color-223;
+  border-bottom: 1px solid $white-color;
 }

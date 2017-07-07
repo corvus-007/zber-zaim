@@ -71,7 +71,7 @@
 }
 
 .cta__form {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
 
   .form-label {
     @include visuallyhidden();
@@ -123,4 +123,8 @@
 .cta__note {
   font-size: rem($font-size--small);
   opacity: 0.6;
+
+  & > :last-child {
+    margin-bottom: 0;
+  }
 }

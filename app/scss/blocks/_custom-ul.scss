@@ -1,23 +1,26 @@
 .custom-ul,
 ul:not([class]) {
-  $dimensions-marker: 8;
+  $dimensions-marker: 12;
 
   margin-left: 0;
   margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 1rem;
   padding: 0;
   list-style: none;
 
   li {
     position: relative;
-    padding-left: rem(35);
+    padding-left: rem(20);
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
-      left: rem(20);
-      top: 0.5em;
+      left: 0;
+      top: 0.4em;
       width: rem($dimensions-marker);
       height: rem($dimensions-marker);
+      border: 4px solid #37ab00;
       box-sizing: border-box;
       border-radius: 50%;
       background-color: $accent-color;
