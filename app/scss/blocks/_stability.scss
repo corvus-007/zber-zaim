@@ -4,17 +4,18 @@
 
 .stability__group {
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 
-  @media #{$md-width} {
+  @media #{$lg-width} {
     margin-bottom: 0;
   }
 }
 
 .stability__group-image {
   margin-bottom: 1rem;
+  text-align: center;
 
-  @media #{$md-width} {
+  @media #{$lg-width} {
     position: absolute;
     left: 0;
     top: 0;
@@ -25,14 +26,18 @@
 }
 
 .stability__group--reverse .stability__group-image {
-  left: 50%;
-  right: 0;
+  @media #{$lg-width} {
+    left: 50%;
+    right: 0;
+  }
 }
 
 .stability__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  @media #{$lg-width} {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .stability__group-container {
@@ -46,12 +51,12 @@
     margin-bottom: 0;
   }
 
-  @media #{$md-width} {
+  @media #{$lg-width} {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 50%;
-    min-height: 320px;
+    min-height: rem(320);
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: rem(35);
@@ -61,6 +66,8 @@
 }
 
 .stability__group--reverse .stability__text {
-  margin-left: 0;
-  margin-right: auto;
+  @media #{$lg-width} {
+    margin-left: 0;
+    margin-right: auto;
+  }
 }
