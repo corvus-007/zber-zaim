@@ -24,6 +24,10 @@
     cursor: pointer;
     transition: $duration;
 
+    &:last-of-type {
+      border-bottom: none;
+    }
+
     &:hover {
       background-color: rgba($gray-color-246, 0.25);
     }
@@ -43,12 +47,10 @@
     &::after {
       content: "";
       position: absolute;
-      top: 0;
-      bottom: 0;
+      top: 1.45rem;
       right: rem($grid-gutter-width / 3);
       width: 10px;
       height: 10px;
-      margin: auto;
       border: 2px solid $accent-color;
       box-sizing: border-box;
       border-top: none;
@@ -74,6 +76,10 @@
     padding-bottom: ($grid-gutter-width / 2);
     border-bottom: 1px solid $gray-color-236;
     will-change: height;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
 
     & > :first-child {
       margin-top: 0;
