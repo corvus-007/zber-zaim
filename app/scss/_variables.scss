@@ -45,6 +45,7 @@ $border-radius: 2px;
 // Grid
 $grid-columns: 12;
 $grid-gutter-width: 30px;
+$slider-buffer-dots: ($grid-gutter-width * 2);
 
 // Media querys
 $xs-width: 0;
