@@ -39,7 +39,8 @@
       border-color: $gray-color-236;
     }
 
-    .slick-active button {
+    .slick-active button,
+    .slick-active:hover button {
       cursor: default;
       border-color: $secondary-color;
       background: $white-color;
