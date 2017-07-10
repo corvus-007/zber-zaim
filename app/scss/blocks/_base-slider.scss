@@ -1,0 +1,117 @@
+.base-slider {
+
+  .slick-dots {
+    @include clear-list();
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+
+    li {
+      margin-right: 0.5em;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+
+    button {
+      display: block;
+      padding: 0;
+      overflow: hidden;
+      width: rem(16);
+      height: rem(16);
+      border: 4px solid transparent;
+      text-indent: -1000px;
+      background: $gray-color-184;
+      background-clip: content-box;
+      border-radius: 50%;
+      outline: none;
+      cursor: pointer;
+      user-select: none;
+      transition: $duration;
+    }
+
+    li:hover button {
+      border-color: $gray-color-223;
+    }
+
+    .slick-active button {
+      cursor: default;
+      border-color: $secondary-color;
+      background: $white-color;
+    }
+  }
+
+  .slick-arrow {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 60px;
+    height: 60px;
+    margin: auto;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    font-size: 0;
+    outline: none;
+    background: $accent-color;
+    cursor: pointer;
+    transition: filter 0.25s;
+
+    &::before {
+      content: "";
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      margin: auto;
+      position: absolute;
+      width: 100%;
+      width: 33px;
+      height: 33px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+    &:hover {
+      filter: brightness(120%);
+    }
+
+    &.slick-disabled {
+      background: $gray-color-236;
+      cursor: default;
+
+      &:hover {
+        filter: brightness(100%);
+      }
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M31 15H3.4l8.3-8.3c.4-.4.4-1 0-1.4-.4-.4-1-.4-1.4 0l-10 10c-.3.3-.3 1 0 1.3l10 10c.4.3 1 .3 1.4 0 .4-.5.4-1 0-1.5l-8.3-8H31c.7 0 1-.4 1-1s-.3-1-1-1z' clip-rule='evenodd'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  .slick-next {
+    right: 0;
+
+    &::before {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M32 16c0-.3 0-.5-.3-.7l-10-10c-.3-.4-1-.4-1.3 0-.4.4-.4 1 0 1.4l8.2 8.3H1c-.6 0-1 .5-1 1s.4 1 1 1h27.6l-8.2 8.3c-.4.4-.4 1 0 1.4.4.4 1 .4 1.4 0l10-10 .2-.7z' clip-rule='evenodd'/%3E%3C/svg%3E%0A");
+    }
+  }
+
+  @media #{$md-width} {
+    .slick-arrow {
+      width: 85px;
+      height: 85px;
+    }
+  }
+}
