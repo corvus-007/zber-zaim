@@ -45,6 +45,7 @@
   @media #{$xl-width} {
     width: calc((100% - 6 * #{rem($grid-gutter-width * 0.9)}) / 7);
     margin-right: rem($grid-gutter-width * 0.9);
+    margin-bottom: 0;
 
     &:nth-child(7n) {
       margin-right: 0;
