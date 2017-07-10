@@ -1,0 +1,13 @@
+.photos-users {
+  background-color: $white-color;
+}
+
+.photos-users__title {
+  @media #{$lg-width} {
+    max-width: none;
+  }
+}
+
+.photos-users__list {
+
+}
