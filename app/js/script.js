@@ -38,3 +38,32 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
 });
+
+
+
+$('.gallery-slider [data-fancybox]').fancybox({
+  loop: false,
+  afterShow: function (instance, slide) {
+    $('.gallery-slider').slick('slickGoTo', instance.currIndex - 1);
+  }
+});
+
+$('.gallery-slider').slick({
+  accessibility: false,
+  dots: true,
+  infinite: false,
+  slidesToShow: 5,
+  slidesToScroll: 1,
+  responsive: [{
+    breakpoint: 1290,
+    settings: {
+      slidesToShow: 3
+    }
+  }, {
+    breakpoint: 567,
+    settings: {
+      slidesToShow: 1,
+      arrows: false
+    }
+  }]
+});
