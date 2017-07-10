@@ -1,0 +1,21 @@
+.site-footer {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-size: rem($font-size--small);
+  text-align: center;
+  background-color: $base-color;
+  color: $white-color;
+}
+
+.site-footer__inner {
+
+}
+
+.site-footer__socials {
+  margin-bottom: 1em;
+  justify-content: center;
+}
+
+.site-footer__copy {
+  margin-bottom: 0;
+}
