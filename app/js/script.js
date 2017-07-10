@@ -98,4 +98,12 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /*=====  End of Accordion  ======*/
+
+
+  $(window).on('load', function() {
+    $('.photos-users__list').jMosaic({
+      min_row_height: 200,
+      margin: 1
+    });
+  });
 });
