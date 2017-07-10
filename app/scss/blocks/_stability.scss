@@ -63,6 +63,10 @@
     margin-left: auto;
     box-sizing: border-box;
   }
+
+  @media #{$xxl-width} {
+    min-height: rem(400);
+  }
 }
 
 .stability__group--reverse .stability__text {
