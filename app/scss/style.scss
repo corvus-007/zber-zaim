@@ -14,14 +14,13 @@
 @import "vendors/slick";
 @import "vendors/jquery.fancybox.min";
 @import "vendors/jquery.jMosaic";
+@import "vendors/nouislider";
 
 // Blocks
-// @import "blocks/icon";
 @import "blocks/button";
 @import "blocks/form";
 @import "blocks/table";
 @import "blocks/popup";
-@import "blocks/section";
 @import "blocks/custom-ol";
 @import "blocks/custom-ul";
 @import "blocks/base-slider";
@@ -29,11 +28,14 @@
 @import "blocks/logo";
 @import "blocks/communications-header";
 @import "blocks/company-name";
+@import "blocks/section";
 @import "blocks/welcome";
 @import "blocks/cta";
 @import "blocks/intro";
 @import "blocks/intro-subsection";
 @import "blocks/intro-bonuses";
+@import "blocks/calculator";
+@import "blocks/calculator-form";
 @import "blocks/safety";
 @import "blocks/shareholders";
 @import "blocks/shareholders-targets";

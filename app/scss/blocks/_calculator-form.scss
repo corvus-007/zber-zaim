@@ -1,0 +1,148 @@
+.calculator-form {
+  text-align: center;
+}
+
+.calculator-form__item {
+  margin-bottom: rem($grid-gutter-width);
+  text-align: center;
+}
+
+.calculator-form__caption {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: rem($font-size--smaller);
+  text-transform: uppercase;
+}
+
+.calculator-form__group-radio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.calculator-form__radio {
+  margin-bottom: 1rem;
+
+  @media #{$xs-only} {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.calculator-form__radio-input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.calculator-form__radio-caption {
+  @include make-button();
+
+  background-color: $gray-color-236;
+
+  @media #{$xs-only} {
+    flex-grow: 1;
+    padding: 0.6rem;
+    min-width: auto;
+    border-radius: 0;
+  }
+}
+
+input:hover + .calculator-form__radio-caption,
+input:focus + .calculator-form__radio-caption {
+  background-color: $gray-color-223;
+}
+
+input:checked + .calculator-form__radio-caption {
+  background-color: $accent-color;
+  cursor: default;
+}
+
+.calculator-form__field {
+  position: relative;
+  max-width: rem(300);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.calculator-form__input {
+  padding-left: rem($grid-gutter-width * 1);
+  padding-right: rem($grid-gutter-width * 2);
+  font-size: rem($font-size--largest);
+  -moz-appearance: textfield;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0 !important;
+    appearance: none !important;
+    -moz-appearance: textfield !important;
+  }
+}
+
+.calculator-form__filed-after {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: rem(15) rem(20);
+  font-size: rem($font-size);
+  line-height: normal;
+  color: $muted-color;
+  pointer-events: none;
+}
+
+.calculator-form__range {
+  margin-bottom: 3rem;
+}
+
+.calculator-form__output-holder {
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.calculator-form__output {
+  font-weight: 500;
+  font-size: rem(36);
+  font-family: $secondary-font;
+}
+
+
+// Override noUI slider
+.noUi-target {
+  height: 8px;
+  border-radius: 10px;
+  border: none;
+  background: $gray-color-236;
+}
+
+.noUi-horizontal .noUi-handle {
+  top: -10px;
+  left: -14px;
+  width: 28px;
+  height: 28px;
+  outline: none;
+  border-radius: 50%;
+  border-color: $gray-color-236;
+
+
+  &::before {
+    left: 10px;
+  }
+
+  &::after {
+    left: 14px;
+  }
+}
+
+.noUi-horizontal .noUi-tooltip {
+  top: 120%;
+  bottom: auto;
+  font-size: rem($font-size--smaller);
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.noUi-connect {
+  background: $accent-color;
+}
