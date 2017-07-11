@@ -50,6 +50,7 @@
 
 @mixin make-fat-title($font-size-title: $font-size-title--large) {
   margin: 0;
+  font-weight: 500;
   font-size: rem($font-size-title);
   line-height: 1.3;
   font-family: $secondary-font;

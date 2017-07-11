@@ -1,4 +1,5 @@
 .intro {
+  margin-bottom: rem($grid-gutter-width * -3.5);
   padding-bottom: rem($grid-gutter-width * 5);
   background-color: $white-color;
   background-image: url("images/bg-wave-section-gray.svg"), url("images/bg-wave-section-gray--reverse-x.svg");
