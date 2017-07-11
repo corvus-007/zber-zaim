@@ -224,11 +224,41 @@
     </div>
   </section>
 
-  <section class="section">
-    <div class="container-slim">
-      <h2 class="section__title">Калькулятор выгоды</h2>
+  <section class="section container-fluid calculator">
+    <h2 class="section__title">Калькулятор выгоды</h2>
+    <div class="calculator__text">
       <p>Самостоятельно расчитайте выгоду от предложенных бонусов быстро и легко, с помощью онлайн-калькулятора</p>
     </div>
+    <form class="calculator-form">
+      <div class="calculator-form__item">
+        <b class="calculator-form__caption">Выберите тариф</b>
+        <div class="calculator-form__group-radio">
+          <label class="calculator-form__radio">
+            <input class="calculator-form__radio-input" type="radio" name="tarif" value="every-month" checked>
+            <span class="calculator-form__radio-caption">«Ежемесячный доход»</span>
+          </label>
+          <label class="calculator-form__radio">
+            <input class="calculator-form__radio-input" type="radio" name="tarif" value="save">
+            <span class="calculator-form__radio-caption">«Сберегательный»</span>
+          </label>
+        </div>
+      </div>
+      <div class="calculator-form__item">
+        <b class="calculator-form__caption">Первоначальная сумма взноса</b>
+        <div class="calculator-form__field">
+          <input class="calculator-form__input form-control" type="number" value="10000" name="amount" min="0" max="1000000" step="10">
+          <span class="calculator-form__filed-after">руб.</span>
+        </div>
+      </div>
+      <div class="calculator-form__item">
+        <b class="calculator-form__caption">Укажите срок размещения сбережений</b>
+        <div class="calculator-form__range" id="month-slider"></div>
+      </div>
+      <div class="calculator-form__output-holder">
+        <output class="calculator-form__output" name="output"></output>
+      </div>
+      <a class="button" data-fancybox href="#popup-callback">Зафиксировать прибыль</a>
+    </form>
   </section>
 
   <section class="section safety">
