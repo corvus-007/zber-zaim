@@ -69,10 +69,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-  $('.js-tabs').tabslet();
-
-
-
   var monthSlider = document.querySelector('#month-slider');
   var startRange = 3;
 
