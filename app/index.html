@@ -8,711 +8,36 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="site-wrapper">
-    @@include('blocks/site-header.html')
+  @@include('blocks/site-header.html')
 
-    <section class="welcome">
-      <div class="welcome__inner">
-        <div class="welcome__content welcome__column">
-          <h2 class="welcome__title">
-            Откройте депозит в «СОЮЗ<span class="company-name"><span class="company-name__piece">ZБЕР</span>ZАЙМ</span>»
-            <small>и получите пассивный доход <mark>до 17,5%</mark> в год со 100% защитой своих финансов</small>
-          </h2>
-          <ul class="welcome__features">
-            <li>Пайщикам кооператива выплачиваем стабильный процент прибыли</li>
-            <li>Ваш депозит будет застрахован на добровольной основе</li>
-            <li>Процент депозита выше, чем у любого банка</li>
-            <li>Деятельность «СОЮЗ­ ZБЕРZАЙМ» регулируется ЦБ РФ</li>
-            <li>Возможность открыть вклад по повышенной ставке в 24% годовых во время акций</li>
-            <li>Пакетные продукты под любые задачи — накопительные или с возможностью каждый месяц снимать проценты</li>
-          </ul>
-        </div>
-        <div class="welcome__video welcome__column">
-          <div class="welcome__video-poster" style="background-image: url(http://placehold.it/633x445/11999E/fff);">
-            <a class="welcome__video-play" data-fancybox href="https://www.youtube.com/watch?v=NXIH8-4Y0Bk&amp;autoplay=1&amp;showinfo=0">Смтреть видео</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="cta cta--pull-left">
-        <div class="cta__inner">
-          <div class="cta__frame">
-            <h2 class="cta__title">Рассчитайте свою будущую прибыль</h2>
-            <p>Отправьте заявку и наш менеджер свяжется с вами для уточнения деталей.</p>
-            <form class="cta__form" action="" method="post">
-              <label class="form-item cta__form-column cta__form-column--field">
-                <span class="form-label">Как к вам обращаться?</span>
-                <input class="form-control" type="text" placeholder="Как к вам обращаться?">
-              </label>
-              <label class="form-item cta__form-column cta__form-column--field">
-                <span class="form-label">Ваш номер телефона</span>
-                <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__">
-              </label>
-              <div class="cta__form-column cta__form-column--submit">
-                <input class="button cta__form-submit" type="submit" value="Отправить заявку">
-              </div>
-            </form>
-            <div class="cta__note">
-              <p>Помните! Заполнение и отправка заявки вас ни к чему не обязывает, вы сможете просто проконсультироваться и, при желании, воспользоваться нашей услугой.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section intro">
-      <div class="intro__inner container">
-        <h2 class="intro__title section__title">Чтобы найти надежный источник пассивной прибыли, надо постараться</h2>
-        <div class="intro__content">
-          <div class="intro__text intro__column">
-            <p>Когда основная масса потребителей становится неплатежеспособной, инфляция растет немыслимыми темпами, а заработная плата не индексируется для покрытия возникающей разницы, приходится искать дополнительные источники дохода, чтобы сохранить качество жизни на комфортном уровне.</p>
-            <p>Одним из наиболее привлекательных источником такого дохода является пассивная прибыль — инвестиции в надежной форме на выгодных условиях с доходностью выше банковского депозита, а именно — приобретение паев потребительского кредитного кооператива.</p>
-          </div>
-          <div class="intro__image intro__column">
-            <img src="http://placehold.it/580x400/46CDCF/fff" srcset="http://placehold.it/1160x800/EA5455/fff 2x" alt="">
-          </div>
-        </div>
-
-        <section class="intro-subsection">
-          <h3 class="intro-subsection__title">«Ежемесячный доход»</h3>
-          <div class="intro-subsection__content">
-            <div class="intro-subsection__column">
-              <table class="intro__table">
-                <thead>
-                  <tr>
-                    <td colspan="5">
-                      <b>Ежемесячный доход +</b>
-                      10 000 руб. – 1 400 000 руб.
-                    </td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>срок, мес.</th>
-                    <th>годовой %</th>
-                    <th class="intro__table-accent">сумма взноса, руб.</th>
-                    <th>сумма по окончанию срока<span class="intro__note-sign">*</span>, руб.</th>
-                    <th>ежемесячная компенсация<span class="intro__note-sign">*</span>, руб.</th>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>12</td>
-                    <td class="intro__table-accent">1 200 000</td>
-                    <td>36 000</td>
-                    <td>12 000</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>13</td>
-                    <td class="intro__table-accent">30 000</td>
-                    <td>1 950</td>
-                    <td>325</td>
-                  </tr>
-                  <tr>
-                    <td>12</td>
-                    <td>14</td>
-                    <td class="intro__table-accent">500 000</td>
-                    <td>70 000</td>
-                    <td>5 833</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="intro__footnote-table">
-                <p><span class="intro__note-sign">*</span> – за вычетом НДФЛ 35%</p>
-              </div>
-            </div>
-            <div class="intro-subsection__column intro-subsection__column--text">
-              <p>Предоставляем возможность внести сумму от 10 000 руб. до 1 400 000 руб. с возможностью пополнения сбережений и получения процентов ежемесячно.</p>
-              <p>Проценты по программе с вкладом составляют:</p>
-              <ul>
-                <li>на 3 мес. – <b>12%</b>,</li>
-                <li>на 6 мес. – <b>13%</b>,</li>
-                <li>на 12 мес. – <b>14%</b>.</li>
-              </ul>
-              <a class="intro-subsection__button button" href="#">Выбрать</a>
-            </div>
-          </div>
-        </section>
-
-        <div class="intro__divider-subsection"></div>
-
-        <section class="intro-subsection intro-subsection--reverse">
-          <h3 class="intro-subsection__title">«Cберегательный»</h3>
-          <div class="intro-subsection__content">
-            <div class="intro-subsection__column">
-              <table class="intro__table">
-                <thead>
-                  <tr>
-                    <td colspan="4">
-                      <b>Сберегательный +</b>
-                      10 000 руб. – 1 400 000 руб.
-                    </td>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <th>срок, мес.</th>
-                    <th>годовой %</th>
-                    <th>сумма взноса, руб.</th>
-                    <th>сумма по окончанию срока<span class="intro__note-sign">*</span>, руб.</th>
-                  </tr>
-                  <tr>
-                    <td>3</td>
-                    <td>15</td>
-                    <td>10 000</td>
-                    <td>368</td>
-                  </tr>
-                  <tr>
-                    <td>6</td>
-                    <td>16,5</td>
-                    <td>1 800 000</td>
-                    <td>141 412</td>
-                  </tr>
-                  <tr>
-                    <td>12</td>
-                    <td>17,5</td>
-                    <td>500 000</td>
-                    <td>81 820</td>
-                  </tr>
-                </tbody>
-              </table>
-              <div class="intro__footnote-table">
-                <p><span class="intro__note-sign">*</span> – за вычетом НДФЛ 35%</p>
-              </div>
-            </div>
-            <div class="intro-subsection__column intro-subsection__column--text">
-              <p>Предоставляем возможность внести сумму от 10 000 руб. до 1 400 000 руб. с возможностью пополнения сбережений и получения процентов ежемесячно.</p>
-              <p>Проценты по программе с вкладом составляют:</p>
-              <ul>
-                <li>на 3 мес. – <b>15%</b>,</li>
-                <li>на 6 мес. – <b>16,5%</b>,</li>
-                <li>на 12 мес. – <b>17,5%</b>.</li>
-              </ul>
-              <a class="intro-subsection__button button" href="#">Выбрать</a>
-            </div>
-          </div>
-        </section>
-
-        <section class="intro-bonuses">
-          <h3 class="intro-bonuses__title"><span>Дополнительные бонусы – кто от них откажется?</span></h3>
-          <ul class="intro-bonuses__list">
-            <li class="intro-bonuses__item">
-              <div class="intro-bonuses__text">
-                <b class="intro-bonuses__caption">Регулярные выплаты пайщикам</b>
-                <div class="intro-bonuses__description">
-                  <p>Мы следим за регулярностью выплат. Поэтому вы можете быть уверены, что выплата придет вовремя!</p>
-                </div>
-              </div>
-            </li>
-            <li class="intro-bonuses__item">
-              <div class="intro-bonuses__text">
-                <b class="intro-bonuses__caption">Акция «24%»</b>
-                <div class="intro-bonuses__description">
-                  <p>В праздничные дни кооператив часто предоставляет пайщикам особые условия договора с годовым процентом равным 24 для вклада на срок 6 и 12 мес.</p>
-                </div>
-              </div>
-            </li>
-            <li class="intro-bonuses__item">
-              <div class="intro-bonuses__text">
-                <b class="intro-bonuses__caption">Сертификаты на Новый Год</b>
-                <div class="intro-bonuses__description">
-                  <p>Каждый год мы дарим сертификаты на сумму 6 000 рублей</p>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container-slim">
-        <h2 class="section__title">Калькулятор выгоды</h2>
-        <p>Самостоятельно расчитайте выгоду от предложенных бонусов быстро и легко, с помощью онлайн-калькулятора</p>
-      </div>
-    </section>
-
-    <section class="section safety">
-      <div class="container">
-        <h2 class="safety__title section__title">Защитим и приумножим ваши сбережения</h2>
-        <ul class="safety__list">
-          <li class="safety__item">
-            <svg class="safety__icon" width="64" height="64">
-              <use xlink:href=""></use>
-            </svg>
-            <b class="safety__caption">Высокие проценты</b>
-            <div class="safety__description">
-              <p>Доходность наших продуктов превышает банковские проценты на депозит.</p>
-            </div>
-          </li>
-          <li class="safety__item">
-            <svg class="safety__icon" width="64" height="64">
-              <use xlink:href=""></use>
-            </svg>
-            <b class="safety__caption">Доступность</b>
-            <div class="safety__description">
-              <p>Пайщиком может стать любой гражданин РФ старше 16 лет с обязательным предоставлением паспорта.</p>
-            </div>
-          </li>
-          <li class="safety__item">
-            <svg class="safety__icon" width="64" height="64">
-              <use xlink:href=""></use>
-            </svg>
-            <b class="safety__caption">Законность</b>
-            <div class="safety__description">
-              <p>Деятельность кредитного потребительского кооператива обеспечивается Федеральным законом No 190­ФЗ «О кредитной кооперации».</p>
-            </div>
-          </li>
-          <li class="safety__item">
-            <svg class="safety__icon" width="64" height="64">
-              <use xlink:href=""></use>
-            </svg>
-            <b class="safety__caption">Контроль</b>
-            <div class="safety__description">
-              <p>Согласно закону пайщики становятся совладельцами кооператива и могут выполнять контролирующую функцию.</p>
-            </div>
-          </li>
-          <li class="safety__item">
-            <svg class="safety__icon" width="64" height="64">
-              <use xlink:href=""></use>
-            </svg>
-            <b class="safety__caption">Повышение благосостояния пайщиков</b>
-            <div class="safety__description">
-              <p>Поощряем предпринимательскую деятельность, предлагая ссуды из паевого капитала на выгодных условиях.</p>
-            </div>
-          </li>
-          <li class="safety__item">
-            <svg class="safety__icon" width="64" height="64">
-              <use xlink:href=""></use>
-            </svg>
-            <b class="safety__caption">Прозрачное сотрудничество</b>
-            <div class="safety__description">
-              <p>Между кооперативом и пайщиками заключается договор, который имеет юридическую силу с момента подписания обеими сторонами.</p>
-            </div>
-          </li>
-          <li class="safety__item">
-            <svg class="safety__icon" width="64" height="64">
-              <use xlink:href=""></use>
-            </svg>
-            <b class="safety__caption">Полная открытость</b>
-            <div class="safety__description">
-              <p>Все операции по открытию счета, вложениям и выплатам можно выполнять в режиме онлайн на нашем сайте или при личном общении с нашими сотрудниками в офисе кооператива.</p>
-            </div>
-          </li>
-          <li class="safety__item">
-            <svg class="safety__icon" width="64" height="64">
-              <use xlink:href=""></use>
-            </svg>
-            <b class="safety__caption">100% безопасность</b>
-            <div class="safety__description">
-              <p>Гарантируем высокий уровень защиты паевого капитала компенсационным и резервным фондами.</p>
-            </div>
-          </li>
-          <li class="safety__item">
-            <svg class="safety__icon" width="64" height="64">
-              <use xlink:href=""></use>
-            </svg>
-            <b class="safety__caption">Социальные программы</b>
-            <div class="safety__description">
-              <p>Пенсионеры получают особо выгодные льготные условия вкладов.</p>
-            </div>
-          </li>
-          <li class="safety__item">
-            <svg class="safety__icon" width="64" height="64">
-              <use xlink:href=""></use>
-            </svg>
-            <b class="safety__caption">Приятные сюрпризы</b>
-            <div class="safety__description">
-              <p>Процентная ставка по договорам, заключенным во время очередной акции, может составлять 24% годовых.</p>
-            </div>
-          </li>
+  <section class="welcome">
+    <div class="welcome__inner">
+      <div class="welcome__content welcome__column">
+        <h2 class="welcome__title">
+          Откройте депозит в «СОЮЗ<span class="company-name"><span class="company-name__piece">ZБЕР</span>ZАЙМ</span>»
+          <small>и получите пассивный доход <mark>до 17,5%</mark> в год со 100% защитой своих финансов</small>
+        </h2>
+        <ul class="welcome__features">
+          <li>Пайщикам кооператива выплачиваем стабильный процент прибыли</li>
+          <li>Ваш депозит будет застрахован на добровольной основе</li>
+          <li>Процент депозита выше, чем у любого банка</li>
+          <li>Деятельность «СОЮЗ­ ZБЕРZАЙМ» регулируется ЦБ РФ</li>
+          <li>Возможность открыть вклад по повышенной ставке в 24% годовых во время акций</li>
+          <li>Пакетные продукты под любые задачи — накопительные или с возможностью каждый месяц снимать проценты</li>
         </ul>
       </div>
-    </section>
+      <div class="welcome__video welcome__column">
+        <div class="welcome__video-poster" style="background-image: url(http://placehold.it/633x445/11999E/fff);">
+          <a class="welcome__video-play" data-fancybox href="https://www.youtube.com/watch?v=NXIH8-4Y0Bk&amp;autoplay=1&amp;showinfo=0">Смтреть видео</a>
+        </div>
+      </div>
+    </div>
 
-    <section class="section shareholders">
-      <div class="container-slim">
-        <h2 class="section__title">Такой возможностью грех не воспользоваться</h2>
-        <div class="shareholders__text">
-          <p>В безопасном сохранении аккумулированных сбережений, обеспечивающем достаточно высокую прибыль на капитал, заинтересованы все. Поэтому наши сберегательные программы универсальны и отличаются только периодом выплаты процентов и их размером. В целом можно выделить три основные категории пайщиков кредитного потребительского кооператива:</p>
-        </div>
-        <ul class="shareholders__category-list">
-          <li class="shareholders__category-item">
-            <div class="shareholders__category-icons-holder">
-              <svg class="shareholders__category-icon" width="116" height="116">
-                <use xlink:href=""></use>
-              </svg>
-              <svg class="shareholders__category-icon" width="116" height="116">
-                <use xlink:href=""></use>
-              </svg>
-            </div>
-            <div class="shareholders__category-content">
-              <b class="shareholders__category-caption">Обычные люди</b>
-              <div class="shareholders__category-description">
-                <p>Пайщики любого рода занятий с излишком денег, из которых они хотят сформировать резервный или целевой фонд, снизив инфляционные риски.</p>
-              </div>
-            </div>
-          </li>
-          <li class="shareholders__category-item">
-            <div class="shareholders__category-icons-holder">
-              <svg class="shareholders__category-icon" width="116" height="116">
-                <use xlink:href=""></use>
-              </svg>
-              <svg class="shareholders__category-icon" width="116" height="116">
-                <use xlink:href=""></use>
-              </svg>
-            </div>
-            <div class="shareholders__category-content">
-              <b class="shareholders__category-caption">Социально незащищенная группа</b>
-              <div class="shareholders__category-description">
-                <p>Пайщики с небольшой аккумулированной суммой, которую они намерены приумножить.</p>
-              </div>
-            </div>
-          </li>
-          <li class="shareholders__category-item">
-            <div class="shareholders__category-icons-holder">
-              <svg class="shareholders__category-icon" width="116" height="116">
-                <use xlink:href=""></use>
-              </svg>
-              <svg class="shareholders__category-icon" width="116" height="116">
-                <use xlink:href=""></use>
-              </svg>
-            </div>
-            <div class="shareholders__category-content">
-              <b class="shareholders__category-caption">Бизнесмены</b>
-              <div class="shareholders__category-description">
-                <p>Пайщики, которые выбирают выгодные условия для надежного инвестирования части прибыли от своей предпринимательской деятельности.</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-
-        <div class="shareholders__subsection">
-          <h3 class="shareholders__subsection-title">Наше предложение заинтересует тех, кто:</h3>
-          <ul class="shareholders-targets">
-            <li>Хочет иметь надежный пассивный доход</li>
-            <li>Не доверяет инвестиционным инструментам с высоким риском</li>
-            <li>Отказывается от банков из-­за низкого депозитного процента</li>
-            <li>Поставил перед собой цель накопить конкретную сумму</li>
-            <li>Хочет обеспечить себе стабильное финансовое положение</li>
-            <li>Привык извлекать выгоду из денежных активов</li>
-            <li>Предпочитает максимально защищенные и гарантированные вклады</li>
-            <li>Ищет возможность получить доступ к ссудам на выгодных условиях для своего бизнеса</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="cta cta--pull-right">
-        <div class="cta__inner">
-          <div class="cta__frame">
-            <h2 class="cta__title">Хотите узнать больше о нашей деятельности?</h2>
-            <p>А может о своих возможностях? Отправьте заявку на консультацию у нашего ведущего специалиста!</p>
-            <form class="cta__form" action="" method="post">
-              <label class="form-item cta__form-column cta__form-column--field">
-                <span class="form-label">Как к вам обращаться?</span>
-                <input class="form-control" type="text" placeholder="Как к вам обращаться?">
-              </label>
-              <label class="form-item cta__form-column cta__form-column--field">
-                <span class="form-label">Ваш номер телефона</span>
-                <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__">
-              </label>
-              <div class="cta__form-column cta__form-column--submit">
-                <input class="button cta__form-submit" type="submit" value="Отправить заявку">
-              </div>
-            </form>
-            <div class="cta__note">
-              <p>Помните! Заполнение и отправка заявки вас ни к чему не обязывает, вы сможете просто проконсультироваться и, при желании, воспользоваться нашей услугой.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section stability">
-      <div class="container">
-        <h2 class="section__title">«СОЮЗ<span class="company-name"><span class="company-name__piece">ZБЕР</span>ZАЙМ</span>»: обеспечиваем клиентам финансовую стабильность</h2>
-      </div>
-      <div class="stability__group">
-        <div class="stability__group-image">
-          <img class="stability__image" src="http://placehold.it/640x320/3490DE/fff" srcset="http://placehold.it/1280x640/3490DE/fff 2x" alt="">
-        </div>
-        <div class="stability__group-container">
-          <div class="stability__text">
-            <p>Потребительский кредитный кооператив «СОЮЗ­ЗБЕРЗАЙМ» — это добровольное объединение грамотных специалистов, цель которых — создать благоприятные условия для сохранения и приумножения личных сбережений пайщиков. Кооператив является членом НП «СРО КПК «Союзмикрофинанс» с записью в реестре No 364, поэтому предоставляет твердые гарантии безопасности вкладов.</p>
-          </div>
-        </div>
-      </div>
-      <div class="stability__group stability__group--reverse">
-        <div class="stability__group-image">
-          <img class="stability__image" src="http://placehold.it/640x320/6639A6/fff" srcset="http://placehold.it/1280x640/6639A6/fff 2x" alt="">
-        </div>
-        <div class="stability__group-container">
-          <div class="stability__text">
-            <p>Мы обеспечиваем стабильный своевременный доход на вложенный капитал посредством перевода денежных средств на открытый счет пайщика в соответствии с условиями, определенными двумя сберегательными продуктами.</p>
-            <p>Наша миссия заключается в предоставлении максимально гарантированных условий для размещения паенакоплений и в обеспечении финансовой стабильности широкого круга населения Российской Федерации без возрастных ограничений.</p>
-          </div>
-        </div>
-      </div>
-      <div class="stability__group">
-        <div class="stability__group-image">
-          <img class="stability__image" src="http://placehold.it/640x320/CC085E/fff" srcset="http://placehold.it/1280x640/CC085E/fff 2x" alt="">
-        </div>
-        <div class="stability__group-container">
-          <div class="stability__text">
-            <p>Мы оправдываем доверие пайщиков, достигая поставленные перед собой цели, безупречно выполняем взятые на себя договорные обязательства, предлагаем прибыльную деловую инициативу и предоставляем ссуды нашим пайщикам на выгодных условиях, таким образом, способствуем увеличению потребительского спроса.</p>
-            <p>Все наши задачи выполняются с учетом интересов наших пайщиков.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section features">
-      <h2 class="section__title visuallyhidden">Преимущества</h2>
-      <div class="section__body container">
-        <ul class="features__list">
-          <li class="features__item">
-            <div class="features__icon-wrapper">
-              <svg class="features__icon" width="28" height="28">
-                <use xlink:href="images/symbols.svg#cup"></use>
-              </svg>
-            </div>
-            <div class="features__text">
-              <p>
-                <b class="features__value">100%</b> безопасность вложений
-              </p>
-            </div>
-          </li>
-          <li class="features__item">
-            <div class="features__icon-wrapper">
-              <svg class="features__icon" width="28" height="28">
-                <use xlink:href="images/symbols.svg#cup"></use>
-              </svg>
-            </div>
-            <div class="features__text">
-              <p>
-                <b class="features__value">10&nbsp;000</b> руб. – минимальный размер взноса
-              </p>
-            </div>
-          </li>
-          <li class="features__item">
-            <div class="features__icon-wrapper">
-              <svg class="features__icon" width="28" height="28">
-                <use xlink:href="images/symbols.svg#cup"></use>
-              </svg>
-            </div>
-            <div class="features__text">
-              <p>
-                <b class="features__value">17.5%</b> годовых (24% – по акции)
-              </p>
-            </div>
-          </li>
-          <li class="features__item">
-            <div class="features__icon-wrapper">
-              <svg class="features__icon" width="28" height="28">
-                <use xlink:href="images/symbols.svg#cup"></use>
-              </svg>
-            </div>
-            <div class="features__text">
-              <p>
-                <b class="features__value">3</b> мес. – минимальный срок вклада
-              </p>
-            </div>
-          </li>
-          <li class="features__item">
-            <div class="features__icon-wrapper">
-              <svg class="features__icon" width="28" height="28">
-                <use xlink:href="images/symbols.svg#cup"></use>
-              </svg>
-            </div>
-            <div class="features__text">
-              <p>
-                <b class="features__value">18</b> региональных офисов
-              </p>
-            </div>
-          </li>
-          <li class="features__item">
-            <div class="features__icon-wrapper">
-              <svg class="features__icon" width="28" height="28">
-                <use xlink:href="images/symbols.svg#cup"></use>
-              </svg>
-            </div>
-            <div class="features__text">
-              <p>
-                <b class="features__value">17&nbsp;895</b> пайщиков
-              </p>
-            </div>
-          </li>
-          <li class="features__item">
-            <div class="features__icon-wrapper">
-              <svg class="features__icon" width="28" height="28">
-                <use xlink:href="images/symbols.svg#cup"></use>
-              </svg>
-            </div>
-            <div class="features__text">
-              <p>
-                <b class="features__value">10</b> лет успешной деятельности
-              </p>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section gallery">
-      <h2 class="section__title">Открыты и прозрачны на 100%</h2>
-      <div class="section__body">
-        <div class="gallery-slider base-slider">
-          <div class="gallery-slider__item">
-            <a data-fancybox="gallery" data-type="image" href="https://images.unsplash.com/photo-1473777785975-efb668f9ea99?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="><img src="https://images.unsplash.com/photo-1473777785975-efb668f9ea99?dpr=1&auto=format&fit=crop&w=407&h=272&q=80&cs=tinysrgb&crop=" alt=""></a>
-          </div>
-          <div class="gallery-slider__item">
-            <a data-fancybox="gallery" data-type="image" href="https://images.unsplash.com/photo-1494247622028-9a5bbfbf529a?dpr=1&auto=format&fit=crop&w=1500&h=998&q=80&cs=tinysrgb&crop="><img src="https://images.unsplash.com/photo-1494247622028-9a5bbfbf529a?dpr=1&auto=format&fit=crop&w=407&h=272&q=80&cs=tinysrgb&crop=" alt=""></a>
-          </div>
-          <div class="gallery-slider__item">
-            <a data-fancybox="gallery" data-type="image" href="https://images.unsplash.com/photo-1439209306665-700c9bca794c?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="><img src="https://images.unsplash.com/photo-1439209306665-700c9bca794c?dpr=1&auto=format&fit=crop&w=407&h=272&q=80&cs=tinysrgb&crop=" alt=""></a>
-          </div>
-          <div class="gallery-slider__item">
-            <a data-fancybox="gallery" data-type="image" href="http://placehold.it/800x600/c7d/fff"><img src="http://placehold.it/407x272/c7d/fff" alt=""></a>
-          </div>
-          <div class="gallery-slider__item">
-            <a data-fancybox="gallery" data-type="image" href="http://placehold.it/800x600/37d/fff"><img src="http://placehold.it/407x272/37d/fff" alt=""></a>
-          </div>
-          <div class="gallery-slider__item">
-            <a data-fancybox="gallery" data-type="image" href="http://placehold.it/800x600/3d7/fff"><img src="http://placehold.it/407x272/3d7/fff" alt=""></a>
-          </div>
-          <div class="gallery-slider__item">
-            <a data-fancybox="gallery" data-type="image" href="http://placehold.it/800x600/d37/fff"><img src="http://placehold.it/407x272/d37/fff" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section faq">
-      <div class="container-slim">
-        <h2 class="section__title faq__title">Посмотрите — возможно, среди этих вопросов есть и ваш</h2>
-      </div>
-      <div class="section__body container-slim">
-        <dl class="faq__list js-accordion">
-          <dt>Вы предлагаете много гарантий: и СРО, и официальный договор. И всё-таки я боюсь потерять деньги. Что ещё вы можете предложить в качестве обеспечения хотя бы возврата вложенной суммы?</dt>
-          <dd>
-            <p>Да! Сразу после отправки фото, мы свяжемся с Вами, чтобы обсудить все вопросы.</p>
-          </dd>
-          <dt>Я больше доверяю личным договоренностям и хотел бы подписать договор в офисе. Скажите, пожалуйста, куда мне нужно подъехать?</dt>
-          <dd>
-            <ol>
-              <li>
-                <p>Выбираете свои фото, которые хотите распечатать.
-                <p>По умолчанию формат фото 10×15 см, на глянцевой бумаге!</p>
-              </li>
-              <li>
-                <p>Загружаете в интернет, любым способом:</p>
-                <ul>
-                  <li><a href="https://drive.google.com/" target="_blank">Google Drive</a></li>
-                  <li><a href="https://disk.yandex.ru/" target="_blank">Яндекс.Диск</a></li>
-                  <li><a href="https://cloud.mail.ru/" target="_blank">Облако@mail.ru</a></li>
-                  <li><a href="https://www.dropbox.com/" target="_blank">Dropbox</a></li>
-                  <li><a href="https://mega.nz/" target="_blank">Mega</a></li>
-                  <li>… и другие</li>
-                </ul>
-              </li>
-              <li>
-                <p>Ссылку на папку отправьте нам через "ЗАГРУЗИТЬ ФОТОЧКИ"</p>
-              </li>
-              <li>
-                <p>Мы свяжемся с Вами, чтобы всё уточнить!</p>
-              </li>
-              <li>
-                <p>В течение суток наш курьер доставит напечатанные фотографии по адресу.</p>
-              </li>
-            </ol>
-          </dd>
-          <dt>Почему у вас проценты выше, чем в банке? Вы же некоммерческая организация...</dt>
-          <dd>
-            <p>Действительно, мы обеспечиваем безопасность вклада пайщиков резервным и компенсационным фондами СРО. К тому же мы предоставляем добровольное страхование. Ваш депозит застрахован. Можете быть уверены в сохранности ваших денег!</p>
-          </dd>
-          <dt>Как вы распоряжаетесь моими деньгами, пока они находятся на депозитном счете?</dt>
-          <dd>
-            <p>В любой район Брянска ваши фото мы доставим бесплатно! Только укажите адрес.</p>
-          </dd>
-          <dt>Как оплачивать?</dt>
-          <dd>
-            <p>В основном принимаем оплату переводом на банковские карты.</p>
-            <p>Другие варианты тоже обсуждаются.</p>
-          </dd>
-        </dl>
-      </div>
-    </section>
-
-    <section class="section photos-users">
-      <h2 class="section__title photos-users__title">Нас много, потому что нам верят. Присоединяйтесь!</h2>
-      <div class="photos-users__list">
-        <img src="https://farm5.staticflickr.com/4262/34800098940_7f3d9e0fe3.jpg" alt="">
-        <img src="https://farm3.staticflickr.com/2873/33474767691_d5c38313f7.jpg" alt="">
-        <img src="https://farm5.staticflickr.com/4282/34867768634_72d4790b15.jpg" alt="">
-        <img src="https://farm3.staticflickr.com/2928/33662688855_d328a82d07.jpg" alt="">
-        <img src="https://farm3.staticflickr.com/2827/33909286862_abe975c15b.jpg" alt="">
-        <img src="https://farm5.staticflickr.com/4133/35516402391_71bf3bd828.jpg" alt="">
-        <img src="https://farm4.staticflickr.com/3935/33850988885_1981b3ca9d.jpg" alt="">
-        <img src="https://farm5.staticflickr.com/4283/35477473525_786bb8739c.jpg" alt="">
-      </div>
-    </section>
-
-    <section class="section reviews">
-      <h2 class="section__title visuallyhidden">Отзывы</h2>
-      <div class="section__body container-fluid">
-        <div class="reviews__slider base-slider">
-          <div class="reviews__item">
-            <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/FF8D68/fff">
-              <img src="http://placehold.it/196x277/FF8D68/fff" alt="">
-            </a>
-          </div>
-          <div class="reviews__item">
-            <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/A10054/fff">
-              <img src="http://placehold.it/196x277/A10054/fff" alt="">
-            </a>
-          </div>
-          <div class="reviews__item">
-            <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/001F52/fff">
-              <img src="http://placehold.it/196x277/001F52/fff" alt="">
-            </a>
-          </div>
-          <div class="reviews__item">
-            <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/ECBC55/fff">
-              <img src="http://placehold.it/196x277/ECBC55/fff" alt="">
-            </a>
-          </div>
-          <div class="reviews__item">
-            <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/FF8D68/fff">
-              <img src="http://placehold.it/196x277/FF8D68/fff" alt="">
-            </a>
-          </div>
-          <div class="reviews__item">
-            <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/A10054/fff">
-              <img src="http://placehold.it/196x277/A10054/fff" alt="">
-            </a>
-          </div>
-          <div class="reviews__item">
-            <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/001F52/fff">
-              <img src="http://placehold.it/196x277/001F52/fff" alt="">
-            </a>
-          </div>
-          <div class="reviews__item">
-            <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/ECBC55/fff">
-              <img src="http://placehold.it/196x277/ECBC55/fff" alt="">
-            </a>
-          </div>
-        </div>
-      </div>
-      <div class="reviews__footer container-fluid">
-        <a class="button" data-fancybox href="#popup-callback">Присоединиться</a>
-      </div>
-    </section>
-
-    <div class="cta">
+    <div class="cta cta--pull-left">
       <div class="cta__inner">
         <div class="cta__frame">
-          <h2 class="cta__title">Предпочитаете искать лучшее предложение из всех имеющихся?</h2>
-          <p>Оставьте заявку на бесплатный расчет ваших будущих доходов, чтобы сравнить условия и убедиться, что с «СОЮЗZБЕРZАЙМ» выгоднее!</p>
+          <h2 class="cta__title">Рассчитайте свою будущую прибыль</h2>
+          <p>Отправьте заявку и наш менеджер свяжется с вами для уточнения деталей.</p>
           <form class="cta__form" action="" method="post">
             <label class="form-item cta__form-column cta__form-column--field">
               <span class="form-label">Как к вам обращаться?</span>
@@ -732,16 +57,689 @@
         </div>
       </div>
     </div>
+  </section>
 
-    <section class="section locations">
-      <h2 class="section__title visuallyhidden">Контакты</h2>
-      <div class="locations__map-holder">
-        <div class="locations__map" id="locatoin-map"></div>
+  <section class="section intro">
+    <div class="intro__inner container">
+      <h2 class="intro__title section__title">Чтобы найти надежный источник пассивной прибыли, надо постараться</h2>
+      <div class="intro__content">
+        <div class="intro__text intro__column">
+          <p>Когда основная масса потребителей становится неплатежеспособной, инфляция растет немыслимыми темпами, а заработная плата не индексируется для покрытия возникающей разницы, приходится искать дополнительные источники дохода, чтобы сохранить качество жизни на комфортном уровне.</p>
+          <p>Одним из наиболее привлекательных источником такого дохода является пассивная прибыль — инвестиции в надежной форме на выгодных условиях с доходностью выше банковского депозита, а именно — приобретение паев потребительского кредитного кооператива.</p>
+        </div>
+        <div class="intro__image intro__column">
+          <img src="http://placehold.it/580x400/46CDCF/fff" srcset="http://placehold.it/1160x800/EA5455/fff 2x" alt="">
+        </div>
       </div>
-    </section>
 
-    @@include('blocks/site-footer.html')
+      <section class="intro-subsection">
+        <h3 class="intro-subsection__title">«Ежемесячный доход»</h3>
+        <div class="intro-subsection__content">
+          <div class="intro-subsection__column">
+            <table class="intro__table">
+              <thead>
+                <tr>
+                  <td colspan="5">
+                    <b>Ежемесячный доход +</b>
+                    10 000 руб. – 1 400 000 руб.
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>срок, мес.</th>
+                  <th>годовой %</th>
+                  <th class="intro__table-accent">сумма взноса, руб.</th>
+                  <th>сумма по окончанию срока<span class="intro__note-sign">*</span>, руб.</th>
+                  <th>ежемесячная компенсация<span class="intro__note-sign">*</span>, руб.</th>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>12</td>
+                  <td class="intro__table-accent">1 200 000</td>
+                  <td>36 000</td>
+                  <td>12 000</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>13</td>
+                  <td class="intro__table-accent">30 000</td>
+                  <td>1 950</td>
+                  <td>325</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>14</td>
+                  <td class="intro__table-accent">500 000</td>
+                  <td>70 000</td>
+                  <td>5 833</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="intro__footnote-table">
+              <p><span class="intro__note-sign">*</span> – за вычетом НДФЛ 35%</p>
+            </div>
+          </div>
+          <div class="intro-subsection__column intro-subsection__column--text">
+            <p>Предоставляем возможность внести сумму от 10 000 руб. до 1 400 000 руб. с возможностью пополнения сбережений и получения процентов ежемесячно.</p>
+            <p>Проценты по программе с вкладом составляют:</p>
+            <ul>
+              <li>на 3 мес. – <b>12%</b>,</li>
+              <li>на 6 мес. – <b>13%</b>,</li>
+              <li>на 12 мес. – <b>14%</b>.</li>
+            </ul>
+            <a class="intro-subsection__button button" href="#">Выбрать</a>
+          </div>
+        </div>
+      </section>
+
+      <hr class="intro__divider-subsection">
+
+      <section class="intro-subsection intro-subsection--reverse">
+        <h3 class="intro-subsection__title">«Cберегательный»</h3>
+        <div class="intro-subsection__content">
+          <div class="intro-subsection__column">
+            <table class="intro__table">
+              <thead>
+                <tr>
+                  <td colspan="4">
+                    <b>Сберегательный +</b>
+                    10 000 руб. – 1 400 000 руб.
+                  </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th>срок, мес.</th>
+                  <th>годовой %</th>
+                  <th>сумма взноса, руб.</th>
+                  <th>сумма по окончанию срока<span class="intro__note-sign">*</span>, руб.</th>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>15</td>
+                  <td>10 000</td>
+                  <td>368</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>16,5</td>
+                  <td>1 800 000</td>
+                  <td>141 412</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>17,5</td>
+                  <td>500 000</td>
+                  <td>81 820</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="intro__footnote-table">
+              <p><span class="intro__note-sign">*</span> – за вычетом НДФЛ 35%</p>
+            </div>
+          </div>
+          <div class="intro-subsection__column intro-subsection__column--text">
+            <p>Предоставляем возможность внести сумму от 10 000 руб. до 1 400 000 руб. с возможностью пополнения сбережений и получения процентов ежемесячно.</p>
+            <p>Проценты по программе с вкладом составляют:</p>
+            <ul>
+              <li>на 3 мес. – <b>15%</b>,</li>
+              <li>на 6 мес. – <b>16,5%</b>,</li>
+              <li>на 12 мес. – <b>17,5%</b>.</li>
+            </ul>
+            <a class="intro-subsection__button button" href="#">Выбрать</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-bonuses">
+        <h3 class="intro-bonuses__title"><span>Дополнительные бонусы – кто от них откажется?</span></h3>
+        <ul class="intro-bonuses__list">
+          <li class="intro-bonuses__item">
+            <div class="intro-bonuses__text">
+              <b class="intro-bonuses__caption">Регулярные выплаты пайщикам</b>
+              <div class="intro-bonuses__description">
+                <p>Мы следим за регулярностью выплат. Поэтому вы можете быть уверены, что выплата придет вовремя!</p>
+              </div>
+            </div>
+          </li>
+          <li class="intro-bonuses__item">
+            <div class="intro-bonuses__text">
+              <b class="intro-bonuses__caption">Акция «24%»</b>
+              <div class="intro-bonuses__description">
+                <p>В праздничные дни кооператив часто предоставляет пайщикам особые условия договора с годовым процентом равным 24 для вклада на срок 6 и 12 мес.</p>
+              </div>
+            </div>
+          </li>
+          <li class="intro-bonuses__item">
+            <div class="intro-bonuses__text">
+              <b class="intro-bonuses__caption">Сертификаты на Новый Год</b>
+              <div class="intro-bonuses__description">
+                <p>Каждый год мы дарим сертификаты на сумму 6 000 рублей</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container-slim">
+      <h2 class="section__title">Калькулятор выгоды</h2>
+      <p>Самостоятельно расчитайте выгоду от предложенных бонусов быстро и легко, с помощью онлайн-калькулятора</p>
+    </div>
+  </section>
+
+  <section class="section safety">
+    <div class="container">
+      <h2 class="safety__title section__title">Защитим и приумножим ваши сбережения</h2>
+      <ul class="safety__list">
+        <li class="safety__item">
+          <svg class="safety__icon" width="64" height="64">
+            <use xlink:href=""></use>
+          </svg>
+          <b class="safety__caption">Высокие проценты</b>
+          <div class="safety__description">
+            <p>Доходность наших продуктов превышает банковские проценты на депозит.</p>
+          </div>
+        </li>
+        <li class="safety__item">
+          <svg class="safety__icon" width="64" height="64">
+            <use xlink:href=""></use>
+          </svg>
+          <b class="safety__caption">Доступность</b>
+          <div class="safety__description">
+            <p>Пайщиком может стать любой гражданин РФ старше 16 лет с обязательным предоставлением паспорта.</p>
+          </div>
+        </li>
+        <li class="safety__item">
+          <svg class="safety__icon" width="64" height="64">
+            <use xlink:href=""></use>
+          </svg>
+          <b class="safety__caption">Законность</b>
+          <div class="safety__description">
+            <p>Деятельность кредитного потребительского кооператива обеспечивается Федеральным законом No 190­ФЗ «О кредитной кооперации».</p>
+          </div>
+        </li>
+        <li class="safety__item">
+          <svg class="safety__icon" width="64" height="64">
+            <use xlink:href=""></use>
+          </svg>
+          <b class="safety__caption">Контроль</b>
+          <div class="safety__description">
+            <p>Согласно закону пайщики становятся совладельцами кооператива и могут выполнять контролирующую функцию.</p>
+          </div>
+        </li>
+        <li class="safety__item">
+          <svg class="safety__icon" width="64" height="64">
+            <use xlink:href=""></use>
+          </svg>
+          <b class="safety__caption">Повышение благосостояния пайщиков</b>
+          <div class="safety__description">
+            <p>Поощряем предпринимательскую деятельность, предлагая ссуды из паевого капитала на выгодных условиях.</p>
+          </div>
+        </li>
+        <li class="safety__item">
+          <svg class="safety__icon" width="64" height="64">
+            <use xlink:href=""></use>
+          </svg>
+          <b class="safety__caption">Прозрачное сотрудничество</b>
+          <div class="safety__description">
+            <p>Между кооперативом и пайщиками заключается договор, который имеет юридическую силу с момента подписания обеими сторонами.</p>
+          </div>
+        </li>
+        <li class="safety__item">
+          <svg class="safety__icon" width="64" height="64">
+            <use xlink:href=""></use>
+          </svg>
+          <b class="safety__caption">Полная открытость</b>
+          <div class="safety__description">
+            <p>Все операции по открытию счета, вложениям и выплатам можно выполнять в режиме онлайн на нашем сайте или при личном общении с нашими сотрудниками в офисе кооператива.</p>
+          </div>
+        </li>
+        <li class="safety__item">
+          <svg class="safety__icon" width="64" height="64">
+            <use xlink:href=""></use>
+          </svg>
+          <b class="safety__caption">100% безопасность</b>
+          <div class="safety__description">
+            <p>Гарантируем высокий уровень защиты паевого капитала компенсационным и резервным фондами.</p>
+          </div>
+        </li>
+        <li class="safety__item">
+          <svg class="safety__icon" width="64" height="64">
+            <use xlink:href=""></use>
+          </svg>
+          <b class="safety__caption">Социальные программы</b>
+          <div class="safety__description">
+            <p>Пенсионеры получают особо выгодные льготные условия вкладов.</p>
+          </div>
+        </li>
+        <li class="safety__item">
+          <svg class="safety__icon" width="64" height="64">
+            <use xlink:href=""></use>
+          </svg>
+          <b class="safety__caption">Приятные сюрпризы</b>
+          <div class="safety__description">
+            <p>Процентная ставка по договорам, заключенным во время очередной акции, может составлять 24% годовых.</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section shareholders">
+    <div class="container-slim">
+      <h2 class="section__title">Такой возможностью грех не воспользоваться</h2>
+      <div class="shareholders__text">
+        <p>В безопасном сохранении аккумулированных сбережений, обеспечивающем достаточно высокую прибыль на капитал, заинтересованы все. Поэтому наши сберегательные программы универсальны и отличаются только периодом выплаты процентов и их размером. В целом можно выделить три основные категории пайщиков кредитного потребительского кооператива:</p>
+      </div>
+      <ul class="shareholders__category-list">
+        <li class="shareholders__category-item">
+          <div class="shareholders__category-icons-holder">
+            <svg class="shareholders__category-icon" width="116" height="116">
+              <use xlink:href=""></use>
+            </svg>
+            <svg class="shareholders__category-icon" width="116" height="116">
+              <use xlink:href=""></use>
+            </svg>
+          </div>
+          <div class="shareholders__category-content">
+            <b class="shareholders__category-caption">Обычные люди</b>
+            <div class="shareholders__category-description">
+              <p>Пайщики любого рода занятий с излишком денег, из которых они хотят сформировать резервный или целевой фонд, снизив инфляционные риски.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shareholders__category-item">
+          <div class="shareholders__category-icons-holder">
+            <svg class="shareholders__category-icon" width="116" height="116">
+              <use xlink:href=""></use>
+            </svg>
+            <svg class="shareholders__category-icon" width="116" height="116">
+              <use xlink:href=""></use>
+            </svg>
+          </div>
+          <div class="shareholders__category-content">
+            <b class="shareholders__category-caption">Социально незащищенная группа</b>
+            <div class="shareholders__category-description">
+              <p>Пайщики с небольшой аккумулированной суммой, которую они намерены приумножить.</p>
+            </div>
+          </div>
+        </li>
+        <li class="shareholders__category-item">
+          <div class="shareholders__category-icons-holder">
+            <svg class="shareholders__category-icon" width="116" height="116">
+              <use xlink:href=""></use>
+            </svg>
+            <svg class="shareholders__category-icon" width="116" height="116">
+              <use xlink:href=""></use>
+            </svg>
+          </div>
+          <div class="shareholders__category-content">
+            <b class="shareholders__category-caption">Бизнесмены</b>
+            <div class="shareholders__category-description">
+              <p>Пайщики, которые выбирают выгодные условия для надежного инвестирования части прибыли от своей предпринимательской деятельности.</p>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <div class="shareholders__subsection">
+        <h3 class="shareholders__subsection-title">Наше предложение заинтересует тех, кто:</h3>
+        <ul class="shareholders-targets">
+          <li>Хочет иметь надежный пассивный доход</li>
+          <li>Не доверяет инвестиционным инструментам с высоким риском</li>
+          <li>Отказывается от банков из-­за низкого депозитного процента</li>
+          <li>Поставил перед собой цель накопить конкретную сумму</li>
+          <li>Хочет обеспечить себе стабильное финансовое положение</li>
+          <li>Привык извлекать выгоду из денежных активов</li>
+          <li>Предпочитает максимально защищенные и гарантированные вклады</li>
+          <li>Ищет возможность получить доступ к ссудам на выгодных условиях для своего бизнеса</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cta cta--pull-right">
+      <div class="cta__inner">
+        <div class="cta__frame">
+          <h2 class="cta__title">Хотите узнать больше о нашей деятельности?</h2>
+          <p>А может о своих возможностях? Отправьте заявку на консультацию у нашего ведущего специалиста!</p>
+          <form class="cta__form" action="" method="post">
+            <label class="form-item cta__form-column cta__form-column--field">
+              <span class="form-label">Как к вам обращаться?</span>
+              <input class="form-control" type="text" placeholder="Как к вам обращаться?">
+            </label>
+            <label class="form-item cta__form-column cta__form-column--field">
+              <span class="form-label">Ваш номер телефона</span>
+              <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__">
+            </label>
+            <div class="cta__form-column cta__form-column--submit">
+              <input class="button cta__form-submit" type="submit" value="Отправить заявку">
+            </div>
+          </form>
+          <div class="cta__note">
+            <p>Помните! Заполнение и отправка заявки вас ни к чему не обязывает, вы сможете просто проконсультироваться и, при желании, воспользоваться нашей услугой.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section stability">
+    <div class="container">
+      <h2 class="section__title">«СОЮЗ<span class="company-name"><span class="company-name__piece">ZБЕР</span>ZАЙМ</span>»: обеспечиваем клиентам финансовую стабильность</h2>
+    </div>
+    <div class="stability__group">
+      <div class="stability__group-image">
+        <img class="stability__image" src="http://placehold.it/640x320/3490DE/fff" srcset="http://placehold.it/1280x640/3490DE/fff 2x" alt="">
+      </div>
+      <div class="stability__group-container">
+        <div class="stability__text">
+          <p>Потребительский кредитный кооператив «СОЮЗ­ЗБЕРЗАЙМ» — это добровольное объединение грамотных специалистов, цель которых — создать благоприятные условия для сохранения и приумножения личных сбережений пайщиков. Кооператив является членом НП «СРО КПК «Союзмикрофинанс» с записью в реестре No 364, поэтому предоставляет твердые гарантии безопасности вкладов.</p>
+        </div>
+      </div>
+    </div>
+    <div class="stability__group stability__group--reverse">
+      <div class="stability__group-image">
+        <img class="stability__image" src="http://placehold.it/640x320/6639A6/fff" srcset="http://placehold.it/1280x640/6639A6/fff 2x" alt="">
+      </div>
+      <div class="stability__group-container">
+        <div class="stability__text">
+          <p>Мы обеспечиваем стабильный своевременный доход на вложенный капитал посредством перевода денежных средств на открытый счет пайщика в соответствии с условиями, определенными двумя сберегательными продуктами.</p>
+          <p>Наша миссия заключается в предоставлении максимально гарантированных условий для размещения паенакоплений и в обеспечении финансовой стабильности широкого круга населения Российской Федерации без возрастных ограничений.</p>
+        </div>
+      </div>
+    </div>
+    <div class="stability__group">
+      <div class="stability__group-image">
+        <img class="stability__image" src="http://placehold.it/640x320/CC085E/fff" srcset="http://placehold.it/1280x640/CC085E/fff 2x" alt="">
+      </div>
+      <div class="stability__group-container">
+        <div class="stability__text">
+          <p>Мы оправдываем доверие пайщиков, достигая поставленные перед собой цели, безупречно выполняем взятые на себя договорные обязательства, предлагаем прибыльную деловую инициативу и предоставляем ссуды нашим пайщикам на выгодных условиях, таким образом, способствуем увеличению потребительского спроса.</p>
+          <p>Все наши задачи выполняются с учетом интересов наших пайщиков.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section features">
+    <h2 class="section__title visuallyhidden">Преимущества</h2>
+    <div class="section__body container">
+      <ul class="features__list">
+        <li class="features__item">
+          <div class="features__icon-wrapper">
+            <svg class="features__icon" width="28" height="28">
+              <use xlink:href="images/symbols.svg#cup"></use>
+            </svg>
+          </div>
+          <div class="features__text">
+            <p>
+              <b class="features__value">100%</b> безопасность вложений
+            </p>
+          </div>
+        </li>
+        <li class="features__item">
+          <div class="features__icon-wrapper">
+            <svg class="features__icon" width="28" height="28">
+              <use xlink:href="images/symbols.svg#cup"></use>
+            </svg>
+          </div>
+          <div class="features__text">
+            <p>
+              <b class="features__value">10&nbsp;000</b> руб. – минимальный размер взноса
+            </p>
+          </div>
+        </li>
+        <li class="features__item">
+          <div class="features__icon-wrapper">
+            <svg class="features__icon" width="28" height="28">
+              <use xlink:href="images/symbols.svg#cup"></use>
+            </svg>
+          </div>
+          <div class="features__text">
+            <p>
+              <b class="features__value">17.5%</b> годовых (24% – по акции)
+            </p>
+          </div>
+        </li>
+        <li class="features__item">
+          <div class="features__icon-wrapper">
+            <svg class="features__icon" width="28" height="28">
+              <use xlink:href="images/symbols.svg#cup"></use>
+            </svg>
+          </div>
+          <div class="features__text">
+            <p>
+              <b class="features__value">3</b> мес. – минимальный срок вклада
+            </p>
+          </div>
+        </li>
+        <li class="features__item">
+          <div class="features__icon-wrapper">
+            <svg class="features__icon" width="28" height="28">
+              <use xlink:href="images/symbols.svg#cup"></use>
+            </svg>
+          </div>
+          <div class="features__text">
+            <p>
+              <b class="features__value">18</b> региональных офисов
+            </p>
+          </div>
+        </li>
+        <li class="features__item">
+          <div class="features__icon-wrapper">
+            <svg class="features__icon" width="28" height="28">
+              <use xlink:href="images/symbols.svg#cup"></use>
+            </svg>
+          </div>
+          <div class="features__text">
+            <p>
+              <b class="features__value">17&nbsp;895</b> пайщиков
+            </p>
+          </div>
+        </li>
+        <li class="features__item">
+          <div class="features__icon-wrapper">
+            <svg class="features__icon" width="28" height="28">
+              <use xlink:href="images/symbols.svg#cup"></use>
+            </svg>
+          </div>
+          <div class="features__text">
+            <p>
+              <b class="features__value">10</b> лет успешной деятельности
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section gallery">
+    <h2 class="section__title">Открыты и прозрачны на 100%</h2>
+    <div class="section__body">
+      <div class="gallery-slider base-slider">
+        <div class="gallery-slider__item">
+          <a data-fancybox="gallery" data-type="image" href="https://images.unsplash.com/photo-1473777785975-efb668f9ea99?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="><img src="https://images.unsplash.com/photo-1473777785975-efb668f9ea99?dpr=1&auto=format&fit=crop&w=407&h=272&q=80&cs=tinysrgb&crop=" alt=""></a>
+        </div>
+        <div class="gallery-slider__item">
+          <a data-fancybox="gallery" data-type="image" href="https://images.unsplash.com/photo-1494247622028-9a5bbfbf529a?dpr=1&auto=format&fit=crop&w=1500&h=998&q=80&cs=tinysrgb&crop="><img src="https://images.unsplash.com/photo-1494247622028-9a5bbfbf529a?dpr=1&auto=format&fit=crop&w=407&h=272&q=80&cs=tinysrgb&crop=" alt=""></a>
+        </div>
+        <div class="gallery-slider__item">
+          <a data-fancybox="gallery" data-type="image" href="https://images.unsplash.com/photo-1439209306665-700c9bca794c?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop="><img src="https://images.unsplash.com/photo-1439209306665-700c9bca794c?dpr=1&auto=format&fit=crop&w=407&h=272&q=80&cs=tinysrgb&crop=" alt=""></a>
+        </div>
+        <div class="gallery-slider__item">
+          <a data-fancybox="gallery" data-type="image" href="http://placehold.it/800x600/c7d/fff"><img src="http://placehold.it/407x272/c7d/fff" alt=""></a>
+        </div>
+        <div class="gallery-slider__item">
+          <a data-fancybox="gallery" data-type="image" href="http://placehold.it/800x600/37d/fff"><img src="http://placehold.it/407x272/37d/fff" alt=""></a>
+        </div>
+        <div class="gallery-slider__item">
+          <a data-fancybox="gallery" data-type="image" href="http://placehold.it/800x600/3d7/fff"><img src="http://placehold.it/407x272/3d7/fff" alt=""></a>
+        </div>
+        <div class="gallery-slider__item">
+          <a data-fancybox="gallery" data-type="image" href="http://placehold.it/800x600/d37/fff"><img src="http://placehold.it/407x272/d37/fff" alt=""></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq">
+    <div class="container-slim">
+      <h2 class="section__title faq__title">Посмотрите — возможно, среди этих вопросов есть и ваш</h2>
+    </div>
+    <div class="section__body container-slim">
+      <dl class="faq__list js-accordion">
+        <dt>Вы предлагаете много гарантий: и СРО, и официальный договор. И всё-таки я боюсь потерять деньги. Что ещё вы можете предложить в качестве обеспечения хотя бы возврата вложенной суммы?</dt>
+        <dd>
+          <p>Да! Сразу после отправки фото, мы свяжемся с Вами, чтобы обсудить все вопросы.</p>
+        </dd>
+        <dt>Я больше доверяю личным договоренностям и хотел бы подписать договор в офисе. Скажите, пожалуйста, куда мне нужно подъехать?</dt>
+        <dd>
+          <ol>
+            <li>
+              <p>Выбираете свои фото, которые хотите распечатать.
+              <p>По умолчанию формат фото 10×15 см, на глянцевой бумаге!</p>
+            </li>
+            <li>
+              <p>Загружаете в интернет, любым способом:</p>
+              <ul>
+                <li><a href="https://drive.google.com/" target="_blank">Google Drive</a></li>
+                <li><a href="https://disk.yandex.ru/" target="_blank">Яндекс.Диск</a></li>
+                <li><a href="https://cloud.mail.ru/" target="_blank">Облако@mail.ru</a></li>
+                <li><a href="https://www.dropbox.com/" target="_blank">Dropbox</a></li>
+                <li><a href="https://mega.nz/" target="_blank">Mega</a></li>
+                <li>… и другие</li>
+              </ul>
+            </li>
+            <li>
+              <p>Ссылку на папку отправьте нам через "ЗАГРУЗИТЬ ФОТОЧКИ"</p>
+            </li>
+            <li>
+              <p>Мы свяжемся с Вами, чтобы всё уточнить!</p>
+            </li>
+            <li>
+              <p>В течение суток наш курьер доставит напечатанные фотографии по адресу.</p>
+            </li>
+          </ol>
+        </dd>
+        <dt>Почему у вас проценты выше, чем в банке? Вы же некоммерческая организация...</dt>
+        <dd>
+          <p>Действительно, мы обеспечиваем безопасность вклада пайщиков резервным и компенсационным фондами СРО. К тому же мы предоставляем добровольное страхование. Ваш депозит застрахован. Можете быть уверены в сохранности ваших денег!</p>
+        </dd>
+        <dt>Как вы распоряжаетесь моими деньгами, пока они находятся на депозитном счете?</dt>
+        <dd>
+          <p>В любой район Брянска ваши фото мы доставим бесплатно! Только укажите адрес.</p>
+        </dd>
+        <dt>Как оплачивать?</dt>
+        <dd>
+          <p>В основном принимаем оплату переводом на банковские карты.</p>
+          <p>Другие варианты тоже обсуждаются.</p>
+        </dd>
+      </dl>
+    </div>
+  </section>
+
+  <section class="section photos-users">
+    <h2 class="section__title photos-users__title">Нас много, потому что нам верят. Присоединяйтесь!</h2>
+    <div class="photos-users__list">
+      <img src="https://farm5.staticflickr.com/4262/34800098940_7f3d9e0fe3.jpg" alt="">
+      <img src="https://farm3.staticflickr.com/2873/33474767691_d5c38313f7.jpg" alt="">
+      <img src="https://farm5.staticflickr.com/4282/34867768634_72d4790b15.jpg" alt="">
+      <img src="https://farm3.staticflickr.com/2928/33662688855_d328a82d07.jpg" alt="">
+      <img src="https://farm3.staticflickr.com/2827/33909286862_abe975c15b.jpg" alt="">
+      <img src="https://farm5.staticflickr.com/4133/35516402391_71bf3bd828.jpg" alt="">
+      <img src="https://farm4.staticflickr.com/3935/33850988885_1981b3ca9d.jpg" alt="">
+      <img src="https://farm5.staticflickr.com/4283/35477473525_786bb8739c.jpg" alt="">
+    </div>
+  </section>
+
+  <section class="section reviews">
+    <h2 class="section__title visuallyhidden">Отзывы</h2>
+    <div class="section__body container-fluid">
+      <div class="reviews__slider base-slider">
+        <div class="reviews__item">
+          <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/FF8D68/fff">
+            <img src="http://placehold.it/196x277/FF8D68/fff" alt="">
+          </a>
+        </div>
+        <div class="reviews__item">
+          <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/A10054/fff">
+            <img src="http://placehold.it/196x277/A10054/fff" alt="">
+          </a>
+        </div>
+        <div class="reviews__item">
+          <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/001F52/fff">
+            <img src="http://placehold.it/196x277/001F52/fff" alt="">
+          </a>
+        </div>
+        <div class="reviews__item">
+          <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/ECBC55/fff">
+            <img src="http://placehold.it/196x277/ECBC55/fff" alt="">
+          </a>
+        </div>
+        <div class="reviews__item">
+          <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/FF8D68/fff">
+            <img src="http://placehold.it/196x277/FF8D68/fff" alt="">
+          </a>
+        </div>
+        <div class="reviews__item">
+          <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/A10054/fff">
+            <img src="http://placehold.it/196x277/A10054/fff" alt="">
+          </a>
+        </div>
+        <div class="reviews__item">
+          <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/001F52/fff">
+            <img src="http://placehold.it/196x277/001F52/fff" alt="">
+          </a>
+        </div>
+        <div class="reviews__item">
+          <a data-fancybox="reviews" data-type="image" href="http://placehold.it/480x680/ECBC55/fff">
+            <img src="http://placehold.it/196x277/ECBC55/fff" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="reviews__footer container-fluid">
+      <a class="button" data-fancybox href="#popup-callback">Присоединиться</a>
+    </div>
+  </section>
+
+  <div class="cta">
+    <div class="cta__inner">
+      <div class="cta__frame">
+        <h2 class="cta__title">Предпочитаете искать лучшее предложение из всех имеющихся?</h2>
+        <p>Оставьте заявку на бесплатный расчет ваших будущих доходов, чтобы сравнить условия и убедиться, что с «СОЮЗZБЕРZАЙМ» выгоднее!</p>
+        <form class="cta__form" action="" method="post">
+          <label class="form-item cta__form-column cta__form-column--field">
+            <span class="form-label">Как к вам обращаться?</span>
+            <input class="form-control" type="text" placeholder="Как к вам обращаться?">
+          </label>
+          <label class="form-item cta__form-column cta__form-column--field">
+            <span class="form-label">Ваш номер телефона</span>
+            <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__">
+          </label>
+          <div class="cta__form-column cta__form-column--submit">
+            <input class="button cta__form-submit" type="submit" value="Отправить заявку">
+          </div>
+        </form>
+        <div class="cta__note">
+          <p>Помните! Заполнение и отправка заявки вас ни к чему не обязывает, вы сможете просто проконсультироваться и, при желании, воспользоваться нашей услугой.</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+  <section class="section locations">
+    <h2 class="section__title visuallyhidden">Контакты</h2>
+    <div class="locations__map-holder">
+      <div class="locations__map" id="locatoin-map"></div>
+    </div>
+  </section>
+
+  @@include('blocks/site-footer.html')
   @@include('blocks/popup-callback.html')
   @@include('blocks/site-scripts.html')
 </body>

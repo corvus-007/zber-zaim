@@ -130,9 +130,11 @@
 .welcome__video-poster {
   position: relative;
   z-index: 3;
+  height: 0;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 
   &::after {
     content: "";
@@ -147,12 +149,11 @@
   }
 
   @media #{$md-only} {
-    @include make-fit-object(5, 3);
+    padding-top: percentage(3/5);
   }
 
   @media #{$lg-width} {
-    @include make-fit-object();
-
+    padding-top: 100%;
     border-radius: 50%;
   }
 }
