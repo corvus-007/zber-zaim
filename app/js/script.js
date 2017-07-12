@@ -1,4 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
+  'use strict';
+
   svg4everybody();
 
 
@@ -186,4 +188,88 @@ document.addEventListener('DOMContentLoaded', function () {
       margin: 1
     });
   });
+
+
+  // Locations
+  // var offices = {},
+  var locationsMap = null,
+    offices = null,
+    locationsList = document.querySelector('.locations-list'),
+    getmarkers = $.getJSON('js/offices.json'),
+    ICONPATH = 'images/location-pin.svg',
+    currInfoWindow;
+
+  function initOfficesMap() {
+    getmarkers.done(function (data) {
+      offices = data;
+
+      var districtMapCenter = offices[0].location;
+
+      locationsMap = new google.maps.Map(document.getElementById('locations-map'), {
+        center: districtMapCenter,
+        zoom: 15,
+        scrollwheel: false
+      });
+
+      // console.dir(offices, data);
+
+      for (var i = 0; i < offices.length; i++) {
+        var marker = offices[i];
+        addMarker(marker);
+      }
+
+      offices.forEach(function (office) {
+        var element = getElementFromTemplate(office);
+        locationsList.appendChild(element);
+      });
+
+      $('.locations-slider').slick({
+        accessibility: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        responsive: [{
+          breakpoint: 567,
+          settings: {
+            slidesToShow: 1,
+            arrows: false
+          }
+        }]
+      });
+    });
+  }
+
+
+
+  function addMarker(markerOption) {
+    var svgIcon = {
+      url: ICONPATH,
+    };
+
+    var marker = new google.maps.Marker({
+      position: markerOption.location,
+      icon: svgIcon,
+      map: locationsMap,
+      title: `${markerOption.city}, ${markerOption.street}`
+    });
+  }
+
+  function getElementFromTemplate(data) {
+    var template = document.querySelector('#location-template');
+    if ('content' in template) {
+      var officeTemplate = template.content.children[0].cloneNode(true);
+    } else {
+      var officeTemplate = template.children[0].cloneNode(true);
+    }
+    officeTemplate.dataset.location = JSON.stringify(data.location);
+    officeTemplate.querySelector('.locations-list__item-city').textContent = data.city;
+    officeTemplate.querySelector('.locations-list__item-street').textContent = data.street;
+    officeTemplate.querySelector('.locations-list__item-phone-link').textContent = data.phone;
+    officeTemplate.querySelector('.locations-list__item-phone-link').href = `tel:${data.phone}`;
+    officeTemplate.querySelector('.locations-list__item-working-time-weekdays').textContent = data.workingTime.weekdays;
+    officeTemplate.querySelector('.locations-list__item-working-time-weekend').textContent = data.workingTime.weekend;
+    return officeTemplate;
+  }
+
+  initOfficesMap();
+
 });

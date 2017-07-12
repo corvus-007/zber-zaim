@@ -737,37 +737,53 @@
     </div>
   </section>
 
-  <div class="cta">
-    <div class="cta__inner">
-      <div class="cta__frame">
-        <h2 class="cta__title">Предпочитаете искать лучшее предложение из всех имеющихся?</h2>
-        <p>Оставьте заявку на бесплатный расчет ваших будущих доходов, чтобы сравнить условия и убедиться, что с «СОЮЗZБЕРZАЙМ» выгоднее!</p>
-        <form class="cta__form" action="" method="post">
-          <label class="form-item cta__form-column cta__form-column--field">
-            <span class="form-label">Как к вам обращаться?</span>
-            <input class="form-control" type="text" placeholder="Как к вам обращаться?">
-          </label>
-          <label class="form-item cta__form-column cta__form-column--field">
-            <span class="form-label">Ваш номер телефона</span>
-            <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__">
-          </label>
-          <div class="cta__form-column cta__form-column--submit">
-            <input class="button cta__form-submit" type="submit" value="Отправить заявку">
+  <section class="section locations">
+    <h2 class="section__title visuallyhidden">Контакты</h2>
+    <div class="cta">
+      <div class="cta__inner">
+        <div class="cta__frame">
+          <h2 class="cta__title">Предпочитаете искать лучшее предложение из всех имеющихся?</h2>
+          <p>Оставьте заявку на бесплатный расчет ваших будущих доходов, чтобы сравнить условия и убедиться, что с «СОЮЗZБЕРZАЙМ» выгоднее!</p>
+          <form class="cta__form" action="" method="post">
+            <label class="form-item cta__form-column cta__form-column--field">
+              <span class="form-label">Как к вам обращаться?</span>
+              <input class="form-control" type="text" placeholder="Как к вам обращаться?">
+            </label>
+            <label class="form-item cta__form-column cta__form-column--field">
+              <span class="form-label">Ваш номер телефона</span>
+              <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__">
+            </label>
+            <div class="cta__form-column cta__form-column--submit">
+              <input class="button cta__form-submit" type="submit" value="Отправить заявку">
+            </div>
+          </form>
+          <div class="cta__note">
+            <p>Помните! Заполнение и отправка заявки вас ни к чему не обязывает, вы сможете просто проконсультироваться и, при желании, воспользоваться нашей услугой.</p>
           </div>
-        </form>
-        <div class="cta__note">
-          <p>Помните! Заполнение и отправка заявки вас ни к чему не обязывает, вы сможете просто проконсультироваться и, при желании, воспользоваться нашей услугой.</p>
         </div>
       </div>
     </div>
-  </div>
-
-  <section class="section locations">
-    <h2 class="section__title visuallyhidden">Контакты</h2>
     <div class="locations__map-holder">
-      <div class="locations__map" id="locatoin-map"></div>
+      <div class="locations__map" id="locations-map"></div>
+    </div>
+    <div class="container-slim">
+      <div class="locations-list locations-slider"></div>
     </div>
   </section>
+
+  <template id="location-template">
+    <p class="locations-list__item locations-slider__item">
+      <b class="locations-list__item-city"></b>
+      <span class="locations-list__item-street"></span>
+      <span class="locations-list__item-phone">
+        т. <a class="locations-list__item-phone-link"></a>
+      </span>
+      <span class="locations-list__item-working-time">
+        <span class="locations-list__item-working-time-weekdays"></span>
+        <span class="locations-list__item-working-time-weekend"></span>
+      </span>
+    </p>
+  </template>
 
   @@include('blocks/site-footer.html')
   @@include('blocks/popup-callback.html')

@@ -1,0 +1,42 @@
+.locations-list {
+
+}
+
+.locations-list__item {
+  margin: 0;
+  text-align: center;
+}
+
+.locations-list__item-city {
+  @include make-fat-title($font-size--largest);
+
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.locations-list__item-street {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.locations-list__item-phone {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: rem($font-size--largest);
+}
+
+.locations-list__item-phone-link {
+}
+
+.locations-list__item-working-time {
+  display: block;
+}
+
+.locations-list__item-working-time-weekdays {
+  display: block;
+}
+
+.locations-list__item-working-time-weekend {
+  display: block;
+}
