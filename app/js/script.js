@@ -227,6 +227,7 @@ document.addEventListener('DOMContentLoaded', function () {
         accessibility: false,
         slidesToShow: 3,
         slidesToScroll: 1,
+        centerMode: true,
         responsive: [{
           breakpoint: 567,
           settings: {
