@@ -1,5 +1,9 @@
 html {
   font-size: $font-size;
+
+  @media #{$xxl-width} {
+    font-size: ($font-size * 1.175);
+  }
 }
 
 body {

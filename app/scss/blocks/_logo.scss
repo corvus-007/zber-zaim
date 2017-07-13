@@ -9,7 +9,7 @@
 .logo__text {
   display: block;
   margin-left: 40px;
-  max-width: 200px;
+  max-width: rem(200);
   font-size: rem($font-size--smaller);
   opacity: 0.5;
 

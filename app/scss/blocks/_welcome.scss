@@ -68,7 +68,7 @@
       top: -0.4em;
       width: rem(30);
       height: rem(30);
-      background: url("images/like.svg") no-repeat center / 175%;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%23fecc00'%3E%3Ccircle cx='24' cy='24' r='12.24'/%3E%3Cpath d='M20.8 28.7h.65c.2.14.4.28.6.4.08.06.18.13.27.16h6.18c.5 0 .94-.3.94-.78 0-.5-.04-.97-.53-.97H29c.5 0 .85-.42.85-.9 0-.5.05-.9-.44-.9h.16c.5 0 .75-.4.75-.9s.07-.9-.4-.9h.16c.48 0 .55-.4.55-.9s-.25-.85-.74-.85h-4.6c.1-.14.65-2.16.6-2.54s-.48-2-.48-2c-.7-.64-1.33-.6-1.84.15v2.15l-1.88 3.14-.9.6m-1.33 6.16h-.7c-.73 0-1.33-.6-1.33-1.34v-4.18c0-.73.6-1.33 1.33-1.33h.7c.73 0 1.33.6 1.33 1.33v4.18c0 .74-.6 1.33-1.33 1.33z'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 175%;
     }
   }
 
@@ -81,7 +81,7 @@
     flex-wrap: wrap;
 
     li {
-      width: calc((100% - #{$grid-gutter-width}) / 2);
+      width: calc((100% - #{rem($grid-gutter-width)}) / 2);
       box-sizing: border-box;
       margin-right: rem($grid-gutter-width);
 
@@ -179,7 +179,7 @@
     left: 0.2rem;
     width: 100%;
     height: 100%;
-    background: url("images/play.svg") no-repeat center / 130%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cg fill='none' stroke='%23006a39'%3E%3Cpath d='M17.68 18.28v11.44c0 .7.75 1.16 1.38.83l10.76-5.72c.67-.35.67-1.3 0-1.66l-10.76-5.72c-.63-.33-1.38.12-1.38.83z'/%3E%3Cpath d='M29.82 24.83c.67-.35.67-1.3 0-1.66l-10.76-5.72M20.2 20.2l2.75 1.36M24.4 22.33l.68.32'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat center / 130%;
     pointer-events: none;
   }
 }

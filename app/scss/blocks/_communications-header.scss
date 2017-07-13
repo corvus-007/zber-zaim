@@ -18,14 +18,36 @@
 }
 
 .communications-header__callback {
+  padding: rem(7) rem(10);
+  font-size: rem(10);
+  text-transform: uppercase;
+  color: $muted-color;
+  border: 1px solid $gray-color-196;
+  border-radius: $border-radius;
+
+  &:hover,
+  &:focus {
+    border-color: currentColor;
+  }
 
   @media #{$xs-only} {
+    padding: 5px;
     font-size: 0;
+    border-radius: 50%;
+    color: $white-color;
+    background-color: $accent-color;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: $accent-color-2;
+      color: $white-color;
+    }
   }
 }
 
 .communications-header__callback-icon {
-  background-color: currentColor;
+  fill: currentColor;
 
   @media #{$sm-width} {
     display: none;
