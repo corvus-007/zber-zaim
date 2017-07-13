@@ -2,7 +2,23 @@ document.addEventListener('DOMContentLoaded', function () {
   'use strict';
 
   svg4everybody();
+  $('input[type="tel"]').mask("+7 (999) 999-99-99", {});
 
+  var audio = null;
+
+  function createAudio() {
+    audio = document.createElement('audio');
+    if (audio.canPlayType('audio/ogg; codecs="vorbis"')) {
+      audio.src = '/glass.ogg';
+    }
+    audio.load();
+  }
+
+  $('.button').on('mouseover', function() {
+    audio.play();
+  });
+
+  createAudio();
 
 
   $('.reviews__slider [data-fancybox]').fancybox({
@@ -193,6 +209,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Locations
   // var offices = {},
   var locationsMap = null,
+    markers = [],
     offices = null,
     locationsList = document.querySelector('.locations-list'),
     getmarkers = $.getJSON('js/offices.json'),
@@ -211,31 +228,34 @@ document.addEventListener('DOMContentLoaded', function () {
         scrollwheel: false
       });
 
-      // console.dir(offices, data);
-
-      for (var i = 0; i < offices.length; i++) {
-        var marker = offices[i];
-        addMarker(marker);
-      }
-
-      offices.forEach(function (office) {
+      markers = offices.map(function (office, index) {
         var element = getElementFromTemplate(office);
         locationsList.appendChild(element);
+
+        return addMarker(office);
       });
 
-      $('.locations-slider').slick({
-        accessibility: false,
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        centerMode: true,
-        responsive: [{
-          breakpoint: 567,
-          settings: {
-            slidesToShow: 1,
-            arrows: false
-          }
-        }]
+      offices.forEach(function (office) {
       });
+
+
+      $('.locations-slider')
+        .slick({
+          accessibility: false,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: true,
+          responsive: [{
+            breakpoint: 677,
+            settings: {
+              slidesToShow: 1,
+            }
+          }]
+        }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+          var activeSlide = slick.$slides[nextSlide];
+          var activeSlideLocation = JSON.parse(activeSlide.dataset.location);
+          locationsMap.panTo(activeSlideLocation);
+        });
     });
   }
 
@@ -250,8 +270,15 @@ document.addEventListener('DOMContentLoaded', function () {
       position: markerOption.location,
       icon: svgIcon,
       map: locationsMap,
-      title: `${markerOption.city}, ${markerOption.street}`
+      title: markerOption.city + ', ' + markerOption.street
     });
+
+    marker.addListener('click', function () {
+      var index = markers.indexOf(this);
+      $('.locations-slider').slick('slickGoTo', index);
+    });
+
+    return marker;
   }
 
   function getElementFromTemplate(data) {
@@ -264,8 +291,17 @@ document.addEventListener('DOMContentLoaded', function () {
     officeTemplate.dataset.location = JSON.stringify(data.location);
     officeTemplate.querySelector('.locations-list__item-city').textContent = data.city;
     officeTemplate.querySelector('.locations-list__item-street').textContent = data.street;
-    officeTemplate.querySelector('.locations-list__item-phone-link').textContent = data.phone;
-    officeTemplate.querySelector('.locations-list__item-phone-link').href = `tel:${data.phone}`;
+    data.phones.forEach(function (phone) {
+      var phoneElem = document.createElement('span');
+      var phoneLink = document.createElement('a');
+      phoneElem.textContent = 'т. ';
+      phoneElem.classList.add('locations-list__item-phone');
+      phoneLink.classList.add('locations-list__item-phone-link');
+      phoneLink.textContent = phone;
+      phoneLink.href = 'tel: ' + phone;
+      phoneElem.appendChild(phoneLink);
+      officeTemplate.querySelector('.locations-list__item-phones-list').appendChild(phoneElem);
+    });
     officeTemplate.querySelector('.locations-list__item-working-time-weekdays').textContent = data.workingTime.weekdays;
     officeTemplate.querySelector('.locations-list__item-working-time-weekend').textContent = data.workingTime.weekend;
     return officeTemplate;

@@ -19,9 +19,13 @@
   margin-bottom: 1rem;
 }
 
-.locations-list__item-phone {
+.locations-list__item-phones-list {
   display: block;
   margin-bottom: 1rem;
+}
+
+.locations-list__item-phone {
+  display: block;
   font-weight: 600;
   font-size: rem($font-size--largest);
 }
