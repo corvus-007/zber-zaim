@@ -112,6 +112,9 @@
 }
 
 .cta__form-submit {
+  @include make-button();
+  @include make-button-color-default();
+
   @media #{$md-width} {
     padding-left: 1em;
     padding-right: 1em;

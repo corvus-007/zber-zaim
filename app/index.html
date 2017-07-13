@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>ЗберЗайм</title>
+  <link rel="stylesheet" href="critical-style.css">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -41,14 +42,14 @@
           <form class="cta__form" action="" method="post">
             <label class="form-item cta__form-column cta__form-column--field">
               <span class="form-label">Как к вам обращаться?</span>
-              <input class="form-control" type="text" placeholder="Как к вам обращаться?">
+              <input class="form-control" type="text" placeholder="Как к вам обращаться?" required>
             </label>
             <label class="form-item cta__form-column cta__form-column--field">
               <span class="form-label">Ваш номер телефона</span>
-              <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__">
+              <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__" required>
             </label>
             <div class="cta__form-column cta__form-column--submit">
-              <input class="button cta__form-submit" type="submit" value="Отправить заявку">
+              <input class="cta__form-submit" type="submit" value="Отправить заявку">
             </div>
           </form>
           <div class="cta__note">
@@ -60,7 +61,7 @@
   </section>
 
   <section class="section intro">
-    <div class="intro__inner container">
+    <div class="container">
       <h2 class="intro__title section__title">Чтобы найти надежный источник пассивной прибыли, надо постараться</h2>
       <div class="intro__content">
         <div class="intro__text intro__column">
@@ -192,6 +193,8 @@
         </div>
       </section>
 
+    </div>
+    <div class="container-slim">
       <section class="intro-bonuses">
         <h3 class="intro-bonuses__title"><span>Дополнительные бонусы – кто от них откажется?</span></h3>
         <ul class="intro-bonuses__list">
@@ -439,14 +442,14 @@
           <form class="cta__form" action="" method="post">
             <label class="form-item cta__form-column cta__form-column--field">
               <span class="form-label">Как к вам обращаться?</span>
-              <input class="form-control" type="text" placeholder="Как к вам обращаться?">
+              <input class="form-control" type="text" placeholder="Как к вам обращаться?" required>
             </label>
             <label class="form-item cta__form-column cta__form-column--field">
               <span class="form-label">Ваш номер телефона</span>
-              <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__">
+              <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__" required>
             </label>
             <div class="cta__form-column cta__form-column--submit">
-              <input class="button cta__form-submit" type="submit" value="Отправить заявку">
+              <input class="cta__form-submit" type="submit" value="Отправить заявку">
             </div>
           </form>
           <div class="cta__note">
@@ -747,14 +750,14 @@
           <form class="cta__form" action="" method="post">
             <label class="form-item cta__form-column cta__form-column--field">
               <span class="form-label">Как к вам обращаться?</span>
-              <input class="form-control" type="text" placeholder="Как к вам обращаться?">
+              <input class="form-control" type="text" placeholder="Как к вам обращаться?" required>
             </label>
             <label class="form-item cta__form-column cta__form-column--field">
               <span class="form-label">Ваш номер телефона</span>
-              <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__">
+              <input class="form-control" type="tel" placeholder="+7 (___) ___-__-__" required>
             </label>
             <div class="cta__form-column cta__form-column--submit">
-              <input class="button cta__form-submit" type="submit" value="Отправить заявку">
+              <input class="cta__form-submit" type="submit" value="Отправить заявку">
             </div>
           </form>
           <div class="cta__note">
@@ -775,8 +778,10 @@
     <p class="locations-list__item locations-slider__item">
       <b class="locations-list__item-city"></b>
       <span class="locations-list__item-street"></span>
-      <span class="locations-list__item-phone">
-        т. <a class="locations-list__item-phone-link"></a>
+      <span class="locations-list__item-phones-list">
+        <!-- <span class="locations-list__item-phone">
+          т. <a class="locations-list__item-phone-link"></a>
+        </span> -->
       </span>
       <span class="locations-list__item-working-time">
         <span class="locations-list__item-working-time-weekdays"></span>

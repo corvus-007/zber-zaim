@@ -5,9 +5,9 @@
 @import "normalize";
 
 // Global
-@import "global/fonts";
+// @import "global/fonts";
 @import "global/grid";
-@import "global/base";
+// @import "global/base";
 @import "global/layout";
 
 // Vendors
@@ -18,19 +18,19 @@
 
 // Blocks
 @import "blocks/button";
-@import "blocks/form";
+// @import "blocks/form";
 @import "blocks/table";
 @import "blocks/popup";
 @import "blocks/custom-ol";
 @import "blocks/custom-ul";
 @import "blocks/base-slider";
-@import "blocks/site-header";
-@import "blocks/logo";
-@import "blocks/communications-header";
-@import "blocks/company-name";
-@import "blocks/section";
-@import "blocks/welcome";
-@import "blocks/cta";
+// @import "blocks/site-header";
+// @import "blocks/logo";
+// @import "blocks/communications-header";
+// @import "blocks/company-name";
+// @import "blocks/section";
+// @import "blocks/welcome";
+// @import "blocks/cta";
 @import "blocks/intro";
 @import "blocks/intro-subsection";
 @import "blocks/intro-bonuses";
