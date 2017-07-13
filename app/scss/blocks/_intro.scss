@@ -5,7 +5,10 @@
   background-image: url("images/bg-wave-section-gray.svg"), url("images/bg-wave-section-gray--reverse-x.svg");
   background-repeat: no-repeat;
   background-position: 100% 0, 100% 100%;
-  background-size: 100% 431px;
+
+  @media #{$xl-width} {
+    background-size: 100% 431px;
+  }
 }
 
 .intro__inner {
