@@ -16,11 +16,10 @@ var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
 var run = require('run-sequence');
 var del = require('del');
-var critical = require('critical').stream;
 
 
 gulp.task('style', function () {
-  return gulp.src('app/scss/style.scss')
+  return gulp.src(['app/scss/style.scss', 'app/scss/critical-style.scss'])
     .pipe(sourcemaps.init())
     .pipe(plumber({
       errorHandler: function (err) {
@@ -44,20 +43,6 @@ gulp.task('style', function () {
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.stream());
-});
-
-gulp.task('critical', ['style'], function () {
-  return gulp.src('app/*.html')
-    .pipe(critical({
-      base: 'app/',
-      // inline: true,
-      // minify: true,
-      css: ['build/style.css']
-    }))
-    .on('error', function (err) {
-      console.log(err.message);
-    })
-    .pipe(gulp.dest('app/blocks/critical-css'));
 });
 
 gulp.task('plugins-js', function () {
@@ -129,7 +114,6 @@ gulp.task('build', function (fn) {
     'style',
     'plugins-js',
     'copy-script',
-    // 'critical',
     'fileinclude',
     'images',
     'symbols',

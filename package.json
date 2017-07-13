@@ -24,8 +24,5 @@
   "scripts": {
     "build": "gulp build",
     "start": "npm run build && gulp serve"
-  },
-  "dependencies": {
-    "critical": "^0.8.4"
   }
 }
