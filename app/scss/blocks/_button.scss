@@ -1,6 +1,6 @@
 @mixin make-button() {
-  display: inline-flex;
-  align-items: center;
+  display: inline-block;
+  // align-items: center;
   justify-content: center;
   min-width: 250px;
   padding: rem(15) rem(30);
