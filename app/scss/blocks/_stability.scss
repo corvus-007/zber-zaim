@@ -6,6 +6,10 @@
   position: relative;
   margin-bottom: 3rem;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media #{$lg-width} {
     margin-bottom: 0;
   }
@@ -57,10 +61,10 @@
     justify-content: center;
     width: 50%;
     min-height: rem(320);
+    margin-left: auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
     padding-left: rem(35);
-    margin-left: auto;
     box-sizing: border-box;
   }
 
