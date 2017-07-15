@@ -4,21 +4,36 @@ document.addEventListener('DOMContentLoaded', function () {
   svg4everybody();
   $('input[type="tel"]').mask("+7 (999) 999-99-99", {});
 
-  var audio = null;
 
-  function createAudio() {
-    audio = document.createElement('audio');
-    if (audio.canPlayType('audio/ogg; codecs="vorbis"')) {
-      audio.src = '/glass.ogg';
+  function Sound(obj) {
+    var self = this;
+    this.nameSound = obj.name;
+
+    var audioElement = null;
+
+    function createAudio() {
+      audioElement = document.createElement('audio');
+      if (audioElement.canPlayType('audio/ogg; codecs="vorbis"')) {
+        audioElement.src = '/' + self.nameSound + '.mp3';
+      }
+      audioElement.load();
     }
-    audio.load();
+    createAudio();
+
+    this.play = function () {
+      audioElement.play();
+    };
   }
 
-  $('.button').on('mouseover', function() {
-    audio.play();
+  var soundHoverButtons = new Sound({
+    name: 'glass'
   });
 
-  createAudio();
+
+
+  $('.button').on('mouseover', function () {
+    soundHoverButtons.play();
+  });
 
 
   $('.reviews__slider [data-fancybox]').fancybox({
@@ -155,7 +170,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   $('.calculator-form').on('input', '.calculator-form__input', function (event) {
-    console.log('input');
     amountValue = this.value;
     calculateOutput.value = formatter.format(calculateTarif());
   });
@@ -207,7 +221,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
   // Locations
-  // var offices = {},
   var locationsMap = null,
     markers = [],
     offices = null,
@@ -235,10 +248,6 @@ document.addEventListener('DOMContentLoaded', function () {
         return addMarker(office);
       });
 
-      offices.forEach(function (office) {
-      });
-
-
       $('.locations-slider')
         .slick({
           accessibility: false,
@@ -258,7 +267,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
   }
-
 
 
   function addMarker(markerOption) {
@@ -308,5 +316,4 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   initOfficesMap();
-
 });
