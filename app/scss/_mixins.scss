@@ -68,6 +68,7 @@
   overflow: hidden;
 }
 
+// Buttons
 @mixin make-button() {
   display: inline-block;
   justify-content: center;
@@ -91,19 +92,19 @@
 }
 
 @mixin make-button-color-default() {
-  color: $accent-color-2;
-  background-color: $secondary-color;
+  color: $button-color;
+  background-color: $button-bg-color;
   background-image: $success-color-gradient;
   box-shadow: $box-shadow-button;
 
   &:hover,
   &:focus {
-    color: $accent-color-2;
-    background-color: mix($white-color, $secondary-color, 15%);
+    color: $button-color;
+    background-color: mix($white-color, $button-bg-color, 20%);
   }
 
   &:active {
-    background-color: mix($base-color, $secondary-color, 15%);
+    background-color: mix($black-color, $button-bg-color, 15%);
   }
 }
 
