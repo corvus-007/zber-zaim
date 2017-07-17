@@ -8,14 +8,14 @@ document.addEventListener('DOMContentLoaded', function () {
   function Sound(obj) {
     var self = this;
     this.nameSound = obj.name;
+    this.volume = obj.volume || 0.3;
 
     var audioElement = null;
 
     function createAudio() {
       audioElement = document.createElement('audio');
-      if (audioElement.canPlayType('audio/ogg; codecs="vorbis"')) {
-        audioElement.src = '/' + self.nameSound + '.mp3';
-      }
+      audioElement.src = '/' + self.nameSound + '.mp3';
+      audioElement.volume = self.volume;
       audioElement.load();
     }
     createAudio();
@@ -23,15 +23,39 @@ document.addEventListener('DOMContentLoaded', function () {
     this.play = function () {
       audioElement.play();
     };
+
+    this.reset = function () {
+      audioElement.currentTime = 0;
+    }
   }
 
   var soundHoverButtons = new Sound({
-    name: 'glass'
+    name: 'button-hover'
+  });
+
+  var soundOpenModal = new Sound({
+    name: 'modal-open'
+  });
+
+  var soundCloseModal = new Sound({
+    name: 'modal-close'
+  });
+
+  $("[data-fancybox]").fancybox({
+    animationEffect: 'zoom-in-out',
+    animationDuration: 555,
+    beforeShow: function () {
+      soundOpenModal.play();
+    },
+    beforeClose: function () {
+      soundCloseModal.play();
+    }
   });
 
 
 
-  $('.button').on('mouseover', function () {
+  $('.button, .cta__form-submit, .communications-header__callback, .welcome__video-play').on('mouseenter', function () {
+    soundHoverButtons.reset();
     soundHoverButtons.play();
   });
 
