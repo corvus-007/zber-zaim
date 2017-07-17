@@ -26,7 +26,7 @@ $link-color: $accent-color;
 
 $button-bg-color: #93df62;
 $button-color: $accent-color-2;
-$success-color-gradient: linear-gradient(to bottom, rgba(#000, 0), #7dc251);
+$success-color-gradient: linear-gradient(to bottom, rgba($white-color, 0), #7dc251);
 
 $box-shadow-button: 0 2px 2px rgba($accent-color-2, 1), inset 0 1px 2px rgba($white-color, 0.5);
 
