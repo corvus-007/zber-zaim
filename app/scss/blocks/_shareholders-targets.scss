@@ -14,8 +14,7 @@
       width: rem(64);
       height: rem(64);
       margin-right: rem($grid-gutter-width / 2);
-        background-color: #3FBAC2;
-        border-radius: 50%;
+      background: url("images/check.svg") no-repeat center / contain;
     }
   }
 
