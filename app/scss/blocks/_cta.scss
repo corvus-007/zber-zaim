@@ -1,6 +1,6 @@
 .cta {
   background-color: $gray-color-236;
-  // background-color: #3EC1D3;
+  overflow: hidden;
 
   @media #{$lg-width} {
     &--pull-left {
