@@ -1,6 +1,6 @@
 .popup {
   width: calc(100% - #{($grid-gutter-width / 2)});
-  max-width: 500px;
+  max-width: rem(500);
   padding: ($grid-gutter-width * 2);
   background-color: $gray-color-236;
 
