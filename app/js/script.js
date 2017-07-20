@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function createAudio() {
       audioElement = document.createElement('audio');
-      audioElement.src = '/' + self.nameSound + '.mp3';
+      audioElement.src = self.nameSound + '.mp3';
       audioElement.volume = self.volume;
       audioElement.load();
     }
@@ -50,6 +50,36 @@ document.addEventListener('DOMContentLoaded', function () {
     beforeClose: function () {
       soundCloseModal.play();
     }
+  });
+
+  $('.cta__form, .callback-form').on('submit', function (event) {
+    event.preventDefault();
+    var formData = $(this).serialize();
+
+    var ajaxResponse = $.ajax({
+      type: "POST",
+      url: "send_email.php",
+      data: formData + '&send_form=""'
+    });
+
+    ajaxResponse.done(function (data, textStatus, jqXHR) {
+      if (data === 'success') {
+        $.fancybox.close();
+        setTimeout(function () {
+          $.fancybox.open('<div class="popup"><h2 class="popup__title">Спасибо!</h2><p style="text-align: center;">Ваша заявка отправлена. Менеджер свяжется с вами в ближайшее время.</p></div>');
+        }, 500);
+      } else {
+        setTimeout(function () {
+          $.fancybox.open('<div class="popup"><h2 class="popup__title">Упс!</h2><p style="text-align: center;">Что-то пошло не так. Повторите попытку позже.</p></div>');
+        }, 500);
+      }
+    });
+
+    ajaxResponse.fail(function (jqXHR, textStatus, errorThrown) {
+      setTimeout(function () {
+        $.fancybox.open('<div class="popup"><h2 class="popup__title">Упс!</h2><p style="text-align: center;">Что-то пошло не так. Повторите попытку позже.</p></div>');
+      }, 500);
+    });
   });
 
 
