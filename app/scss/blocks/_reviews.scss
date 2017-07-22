@@ -17,25 +17,12 @@
 
 .reviews__item {
   a {
+    @include make-fit-object(196, 277);
+
     display: block;
-    position: relative;
-    overflow: hidden;
     border: none;
     border: 12px solid $gray-color-236;
     border-radius: $border-radius;
-    transition: $duration;
-
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba($base-color, 0.6);
-      opacity: 0;
-      transition: opacity $duration;
-    }
 
     &::after {
       content: "";
@@ -44,11 +31,8 @@
       left: 0;
       right: 0;
       bottom: 0;
-      width: 48px;
-      height: 48px;
-      margin: auto;
       transform: scale(1.4);
-      background: url("images/icon-add.svg") no-repeat center / contain;
+      background: rgba($base-color, 0.6) url("images/icon-add.svg") no-repeat center / 64px 64px;
       opacity: 0;
       transition: ($duration * 2);
     }
@@ -61,13 +45,6 @@
       opacity: 1;
       transform: scale(1);
     }
-  }
-
-  img {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    object-fit: cover;
   }
 
   @media #{$sm-width} {
