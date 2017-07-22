@@ -8,22 +8,10 @@
 
 .gallery-slider__item {
   a {
-    display: block;
-    position: relative;
-    overflow: hidden;
-    border: none;
+    @include make-fit-object(407, 272);
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba($accent-color, 0.6);
-      opacity: 0;
-      transition: opacity ($duration * 2);
-    }
+    display: block;
+    border: none;
 
     &::after {
       content: "";
@@ -32,28 +20,16 @@
       left: 0;
       right: 0;
       bottom: 0;
-      width: 64px;
-      height: 64px;
-      margin: auto;
       transform: scale(1.4);
-      background: url("images/icon-add.svg") no-repeat center / 64px;
+      background: rgba($accent-color, 0.6) url("images/icon-add.svg") no-repeat center / 64px 64px;
       opacity: 0;
       transition: ($duration * 2);
-    }
-
-    &:hover::before{
-      opacity: 1;
     }
 
     &:hover::after{
       opacity: 1;
       transform: scale(1);
     }
-  }
-
-  img {
-    object-fit: cover;
-    width: 100%;
   }
 
   @include media-breakpoint-up(sm) {
