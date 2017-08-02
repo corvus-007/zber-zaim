@@ -353,19 +353,19 @@ document.addEventListener('DOMContentLoaded', function () {
     officeTemplate.dataset.location = JSON.stringify(data.location);
     officeTemplate.querySelector('.locations-list__item-city').textContent = data.city;
     officeTemplate.querySelector('.locations-list__item-street').textContent = data.street;
-    data.phones.forEach(function (phone) {
-      var phoneElem = document.createElement('span');
-      var phoneLink = document.createElement('a');
-      phoneElem.textContent = 'т. ';
-      phoneElem.classList.add('locations-list__item-phone');
-      phoneLink.classList.add('locations-list__item-phone-link');
-      phoneLink.textContent = phone;
-      phoneLink.href = 'tel: ' + phone;
-      phoneElem.appendChild(phoneLink);
-      officeTemplate.querySelector('.locations-list__item-phones-list').appendChild(phoneElem);
-    });
-    officeTemplate.querySelector('.locations-list__item-working-time-weekdays').textContent = data.workingTime.weekdays;
-    officeTemplate.querySelector('.locations-list__item-working-time-weekend').textContent = data.workingTime.weekend;
+    // data.phones.forEach(function (phone) {
+    //   var phoneElem = document.createElement('span');
+    //   var phoneLink = document.createElement('a');
+    //   phoneElem.textContent = 'т. ';
+    //   phoneElem.classList.add('locations-list__item-phone');
+    //   phoneLink.classList.add('locations-list__item-phone-link');
+    //   phoneLink.textContent = phone;
+    //   phoneLink.href = 'tel: ' + phone;
+    //   phoneElem.appendChild(phoneLink);
+    //   officeTemplate.querySelector('.locations-list__item-phones-list').appendChild(phoneElem);
+    // });
+    // officeTemplate.querySelector('.locations-list__item-working-time-weekdays').textContent = data.workingTime.weekdays;
+    // officeTemplate.querySelector('.locations-list__item-working-time-weekend').textContent = data.workingTime.weekend;
     return officeTemplate;
   }
 
