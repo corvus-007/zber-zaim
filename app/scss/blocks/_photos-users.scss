@@ -9,5 +9,13 @@
 }
 
 .photos-users__list {
+  a {
+    display: block;
+  }
 
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }

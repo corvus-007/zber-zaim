@@ -268,8 +268,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
   $(window).on('load', function () {
     $('.photos-users__list').jMosaic({
+      items_type: 'a',
       min_row_height: 200,
-      margin: 1
+      margin: 1,
+      is_first_big: true
     });
   });
 
