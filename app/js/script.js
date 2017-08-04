@@ -90,6 +90,41 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
+  $('.certs__slider [data-fancybox]').fancybox({
+    transitionEffect: 'slide',
+    loop: true,
+    infobar: true,
+    afterShow: function (instance, slide) {
+      $('.certs__slider').slick('slickGoTo', instance.currIndex - 1);
+    }
+  });
+
+  $('.certs__slider').slick({
+    accessibility: false,
+    dots: true,
+    arrows: false,
+    infinite: false,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    responsive: [{
+      breakpoint: 1300,
+      settings: {
+        slidesToShow: 5
+      }
+    }, {
+      breakpoint: 770,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 567,
+      settings: {
+        slidesToShow: 1,
+        arrows: false
+      }
+    }]
+  });
+
   $('.reviews__slider [data-fancybox]').fancybox({
     transitionEffect: 'slide',
     loop: true,
@@ -162,8 +197,8 @@ document.addEventListener('DOMContentLoaded', function () {
   var formatter = new Intl.NumberFormat('ru', {
     style: 'currency',
     currency: 'RUB',
-    minimumFractionDigits: 1,
-    maximumFractionDigits: 1,
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
   });
 
   noUiSlider.create(monthSlider, {
@@ -175,9 +210,10 @@ document.addEventListener('DOMContentLoaded', function () {
       decimals: 0
     }),
     range: {
-      'min': 1,
-      'max': 24
-    }
+      'min': [3, 3],
+      '50%': [6, 6],
+      'max': 12
+    },
   });
 
   var handle = monthSlider.querySelector('.noUi-handle');
@@ -201,36 +237,73 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 
+  function calculateMonths() {
+    var percentage = 0;
 
-  function calculateTarif() {
-    return (calculateCoef * amountValue * period + 200);
+    if (period == 12) {
+      percentage = 14;
+    } else if (period == 6) {
+      percentage = 13;
+    } else if (period == 3) {
+      percentage = 12;
+    }
+
+    return ((amountValue * percentage) / 100) / 12 * period;
   }
 
-  var calculatorTarif = 'every-month';
+  function calculateSber() {
+    var percentage = 0;
+
+    if (period == 12) {
+      percentage = 17;
+    } else if (period == 6) {
+      percentage = 16;
+    } else if (period == 3) {
+      percentage = 15;
+    }
+
+    return ((amountValue * percentage) / 100) / 12 * period - (((percentage - 14) * amountValue / 100) * 0.35) / 12 * period;
+  }
+
   var tarifs = {
-    'every-month': 1.2,
-    'save': 2.8
+    'every-month': calculateMonths,
+    'save': calculateSber
   };
-  var calculateCoef = tarifs['every-month'];
+  var currentTarif = 'every-month';
   var amountValue = $('.calculator-form__input')[0].value;
   var period = startRange;
   var calculateOutput = document.querySelector('.calculator-form__output');
+  var calculateOutputNdfl = document.querySelector('.calculator-form__output-ndfl');
+  var ndflSpan = document.createElement('span');
 
-  calculateTarif();
+  tarifs[currentTarif]();
+
+  function outtputCalc() {
+    calculateOutput.innerHTML = formatter.format(tarifs[currentTarif]()) + '<span> / ' + +period + ' мес.</span>';
+    ndflSpan.textContent = formatter.format(tarifs[currentTarif]() / period);
+    if (currentTarif === 'save') {
+      calculateOutputNdfl.innerHTML = '&nbsp;';
+    } else {
+      // ndflSpan = document.createElement('span');
+      calculateOutputNdfl.textContent = 'Ежемесячная компенсация за вычетом НДФЛ 35%: ';
+      calculateOutputNdfl.appendChild(ndflSpan);
+    }
+  }
 
   $('.calculator-form').on('change', '.calculator-form__radio-input', function (event) {
-    calculateCoef = tarifs[this.value];
-    calculateOutput.value = formatter.format(calculateTarif());
+    currentTarif = this.value;
+    tarifs[currentTarif]();
+    outtputCalc();
   });
 
   $('.calculator-form').on('input', '.calculator-form__input', function (event) {
     amountValue = this.value;
-    calculateOutput.value = formatter.format(calculateTarif());
+    outtputCalc();
   });
 
   monthSlider.noUiSlider.on('update', function (values, handle) {
     period = values[handle];
-    calculateOutput.value = formatter.format(calculateTarif());
+    outtputCalc();
   });
 
 
