@@ -160,13 +160,13 @@
                 </tr>
                 <tr>
                   <td data-th="срок, мес.">6</td>
-                  <td data-th="годовой %">16,5</td>
+                  <td data-th="годовой %">16</td>
                   <td class="intro__table-accent" data-th="сумма взноса, руб.">1 800 000</td>
                   <td data-th="сумма по окончанию срока*, руб.">141 412</td>
                 </tr>
                 <tr>
                   <td data-th="срок, мес.">12</td>
-                  <td data-th="годовой %">17,5</td>
+                  <td data-th="годовой %">17</td>
                   <td class="intro__table-accent" data-th="сумма взноса, руб.">500 000</td>
                   <td data-th="сумма по окончанию срока*, руб.">81 820</td>
                 </tr>
@@ -181,8 +181,8 @@
             <p>Проценты по программе с вкладом составляют:</p>
             <ul>
               <li>на 3 мес. – <b>15%</b>,</li>
-              <li>на 6 мес. – <b>16,5%</b>,</li>
-              <li>на 12 мес. – <b>17,5%</b>.</li>
+              <li>на 6 мес. – <b>16%</b>,</li>
+              <li>на 12 мес. – <b>17%</b>.</li>
             </ul>
             <a class="intro-subsection__button button" href="#">Выбрать</a>
           </div>
@@ -245,7 +245,7 @@
       <div class="calculator-form__item">
         <b class="calculator-form__caption">Первоначальная сумма взноса</b>
         <div class="calculator-form__field">
-          <input class="calculator-form__input form-control" type="number" value="1200000" name="amount" min="0" max="1000000" step="10">
+          <input class="calculator-form__input form-control" type="number" value="10000" name="amount" min="0" max="1000000" step="10">
           <span class="calculator-form__filed-after">руб.</span>
         </div>
       </div>
@@ -254,7 +254,8 @@
         <div class="calculator-form__range" id="month-slider"></div>
       </div>
       <div class="calculator-form__output-holder">
-        <output class="calculator-form__output" name="output"></output>
+        <div class="calculator-form__output"></div>
+        <div class="calculator-form__output-ndfl">Ежемесячная компенсация за вычетом НДФЛ 35%: </div>
       </div>
       <a class="button" data-fancybox href="#popup-callback">Зафиксировать прибыль</a>
     </form>
