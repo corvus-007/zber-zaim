@@ -238,28 +238,28 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   function calculateMonths() {
-    var percentage = 0;
+    var percentage = null;
 
-    if (period == 12) {
-      percentage = 14;
+    if (period == 3) {
+      percentage = 12;
     } else if (period == 6) {
       percentage = 13;
-    } else if (period == 3) {
-      percentage = 12;
+    } else if (period == 12) {
+      percentage = 14;
     }
 
     return ((amountValue * percentage) / 100) / 12 * period;
   }
 
   function calculateSber() {
-    var percentage = 0;
+    var percentage = null;
 
-    if (period == 12) {
-      percentage = 17;
+    if (period == 3) {
+      percentage = 15;
     } else if (period == 6) {
       percentage = 16;
-    } else if (period == 3) {
-      percentage = 15;
+    } else if (period == 12) {
+      percentage = 17;
     }
 
     return ((amountValue * percentage) / 100) / 12 * period - (((percentage - 14) * amountValue / 100) * 0.35) / 12 * period;
