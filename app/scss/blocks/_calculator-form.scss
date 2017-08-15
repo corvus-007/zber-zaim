@@ -41,6 +41,8 @@
   background-color: $gray-color-236;
 
   @media #{$xs-only} {
+    display: flex;
+    align-items: center;
     flex-grow: 1;
     padding: 0.6rem;
     min-width: auto;
