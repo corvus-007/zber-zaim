@@ -249,6 +249,19 @@ document.addEventListener('DOMContentLoaded', function () {
     return ((amountValue * percentage) / 100) / 12 * period;
   }
 
+  function calculateMonthsPlus() {
+    var percentage = null;
+
+    if (period == 3) {
+      percentage = 12;
+    } else if (period == 6) {
+      percentage = 13;
+    } else if (period == 12) {
+      percentage = 14;
+    }
+    return ((amountValue * percentage) / 100) / 12 * period;
+  }
+
   function calculateSber() {
     var percentage = null;
 
@@ -267,11 +280,28 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   }
 
+  function calculateSberPlus() {
+    var percentage = null;
+
+    if (period == 3) {
+      percentage = 14;
+    } else if (period == 6) {
+      percentage = 15;
+    } else if (period == 12) {
+      percentage = 16;
+    }
+
+    return ((amountValue * percentage) / 100) / 12 * period - ((((percentage - (REFINANCING_RATE + 5)) * amountValue / 100) * NDFL) / 12 * period);
+  }
+
   var tarifs = {
     'every-month': calculateMonths,
-    'save': calculateSber
+    'save': calculateSber,
+    'every-month+': calculateMonthsPlus,
+    'save+': calculateSberPlus
   };
   var currentTarif = 'every-month';
+  var pensionerField = document.querySelector('#pensioner-field');
   var amountValue = $('.calculator-form__input')[0].value;
   var period = startRange;
   var calculateOutput = document.querySelector('.calculator-form__output');
@@ -280,9 +310,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   tarifs[currentTarif]();
 
-  function outtputCalc() {
-    calculateOutput.innerHTML = formatter.format(tarifs[currentTarif]()) + '<span> / ' + +period + ' мес.</span>';
-    ndflSpan.textContent = formatter.format(tarifs[currentTarif]() / period);
+  function outputCalc() {
+
+    if (!pensionerField.checked) {
+      calculateOutput.innerHTML = formatter.format(tarifs[currentTarif]()) + '<span> / ' + parseFloat(period) + ' мес.</span>';
+      ndflSpan.textContent = formatter.format(tarifs[currentTarif]() / period);
+    } else {
+      calculateOutput.innerHTML = formatter.format(tarifs[currentTarif + '+']()) + '<span> / ' + parseFloat(period) + ' мес.</span>';
+      ndflSpan.textContent = formatter.format(tarifs[currentTarif + '+']() / period);
+    }
+
     if (currentTarif === 'save') {
       calculateOutputNdfl.innerHTML = '&nbsp;';
     } else {
@@ -295,17 +332,21 @@ document.addEventListener('DOMContentLoaded', function () {
   $('.calculator-form').on('change', '.calculator-form__radio-input', function (event) {
     currentTarif = this.value;
     tarifs[currentTarif]();
-    outtputCalc();
+    outputCalc();
+  });
+
+  pensionerField.addEventListener('change', function () {
+    outputCalc();
   });
 
   $('.calculator-form').on('input', '.calculator-form__input', function (event) {
     amountValue = this.value;
-    outtputCalc();
+    outputCalc();
   });
 
   monthSlider.noUiSlider.on('update', function (values, handle) {
     period = values[handle];
-    outtputCalc();
+    outputCalc();
   });
 
 
