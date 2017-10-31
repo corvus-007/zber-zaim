@@ -83,7 +83,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-
   $('.button, .cta__form-submit, .communications-header__callback, .welcome__video-play').on('mouseenter', function () {
     soundHoverButtons.reset();
     soundHoverButtons.play();
@@ -161,7 +160,6 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-
   $('.gallery [data-fancybox]').fancybox({
     loop: false,
     afterMove: function (instance, slide) {
@@ -190,7 +188,8 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-
+  var REFINANCING_RATE = 8.5;
+  var NDFL = 0.35;
   var monthSlider = document.querySelector('#month-slider');
   var startRange = 3;
 
@@ -241,13 +240,12 @@ document.addEventListener('DOMContentLoaded', function () {
     var percentage = null;
 
     if (period == 3) {
-      percentage = 12;
+      percentage = 11;
     } else if (period == 6) {
-      percentage = 13;
+      percentage = 12;
     } else if (period == 12) {
-      percentage = 14;
+      percentage = 13;
     }
-
     return ((amountValue * percentage) / 100) / 12 * period;
   }
 
@@ -255,14 +253,18 @@ document.addEventListener('DOMContentLoaded', function () {
     var percentage = null;
 
     if (period == 3) {
-      percentage = 15;
+      percentage = 13;
     } else if (period == 6) {
-      percentage = 16;
+      percentage = 14;
     } else if (period == 12) {
-      percentage = 17;
+      percentage = 15;
     }
 
-    return ((amountValue * percentage) / 100) / 12 * period - (((percentage - 14) * amountValue / 100) * 0.35) / 12 * period;
+    if (period == 3) {
+      return ((amountValue * percentage) / 100) / 12 * period;
+    } else {
+      return ((amountValue * percentage) / 100) / 12 * period - ((((percentage - (REFINANCING_RATE + 5)) * amountValue / 100) * NDFL) / 12 * period);
+    }
   }
 
   var tarifs = {
@@ -305,7 +307,6 @@ document.addEventListener('DOMContentLoaded', function () {
     period = values[handle];
     outtputCalc();
   });
-
 
 
   /*=================================
