@@ -294,12 +294,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return ((amountValue * percentage) / 100) / 12 * period - ((((percentage - (REFINANCING_RATE + 5)) * amountValue / 100) * NDFL) / 12 * period);
   }
 
-  var tarifs = {
-    'every-month': calculateMonths,
-    'save': calculateSber,
-    'every-month+': calculateMonthsPlus,
-    'save+': calculateSberPlus
-  };
+  var SYMBOL_PLUS = '+';
   var currentTarif = 'every-month';
   var pensionerField = document.querySelector('#pensioner-field');
   var amountValue = $('.calculator-form__input')[0].value;
@@ -307,17 +302,43 @@ document.addEventListener('DOMContentLoaded', function () {
   var calculateOutput = document.querySelector('.calculator-form__output');
   var calculateOutputNdfl = document.querySelector('.calculator-form__output-ndfl');
   var ndflSpan = document.createElement('span');
+  var calculatorRadioCaption = document.querySelectorAll('.calculator-form__radio-caption');
+  var tarifs = {
+    'every-month': calculateMonths,
+    'save': calculateSber,
+    'every-month+': calculateMonthsPlus,
+    'save+': calculateSberPlus
+  };
 
   tarifs[currentTarif]();
 
-  function outputCalc() {
+  function renameCpationToPlus() {
+    Array.from(calculatorRadioCaption).forEach(function (caption) {
+      var searchSymbolPosition = caption.textContent.indexOf(SYMBOL_PLUS);
+      var string = caption.textContent.slice(1, searchSymbolPosition);
 
+      caption.textContent = '«' + string + '+»';
+    });
+  }
+
+  function renameCpationToDefault() {
+    Array.from(calculatorRadioCaption).forEach(function (caption) {
+      var searchSymbolPosition = caption.textContent.indexOf(SYMBOL_PLUS);
+      var string = caption.textContent.slice(1, searchSymbolPosition);
+
+      caption.textContent = '«' + string + '»';
+    });
+  }
+
+  function outputCalc() {
     if (!pensionerField.checked) {
       calculateOutput.innerHTML = formatter.format(tarifs[currentTarif]()) + '<span> / ' + parseFloat(period) + ' мес.</span>';
       ndflSpan.textContent = formatter.format(tarifs[currentTarif]() / period);
+      renameCpationToDefault();
     } else {
       calculateOutput.innerHTML = formatter.format(tarifs[currentTarif + '+']()) + '<span> / ' + parseFloat(period) + ' мес.</span>';
       ndflSpan.textContent = formatter.format(tarifs[currentTarif + '+']() / period);
+      renameCpationToPlus();
     }
 
     if (currentTarif === 'save') {
