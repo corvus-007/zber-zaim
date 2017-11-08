@@ -312,21 +312,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   tarifs[currentTarif]();
 
-  function renameCpationToPlus() {
+  function renameCaptionToPlus() {
     Array.from(calculatorRadioCaption).forEach(function (caption) {
-      var searchSymbolPosition = caption.textContent.indexOf(SYMBOL_PLUS);
-      var string = caption.textContent.slice(1, searchSymbolPosition);
-
-      caption.textContent = '«' + string + '+»';
+      caption.classList.add('calculator-form__radio-caption--plus');
     });
   }
 
-  function renameCpationToDefault() {
+  function renameCaptionToDefault() {
     Array.from(calculatorRadioCaption).forEach(function (caption) {
-      var searchSymbolPosition = caption.textContent.indexOf(SYMBOL_PLUS);
-      var string = caption.textContent.slice(1, searchSymbolPosition);
-
-      caption.textContent = '«' + string + '»';
+      caption.classList.remove('calculator-form__radio-caption--plus');
     });
   }
 
@@ -334,11 +328,11 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!pensionerField.checked) {
       calculateOutput.innerHTML = formatter.format(tarifs[currentTarif]()) + '<span> / ' + parseFloat(period) + ' мес.</span>';
       ndflSpan.textContent = formatter.format(tarifs[currentTarif]() / period);
-      renameCpationToDefault();
+      renameCaptionToDefault();
     } else {
       calculateOutput.innerHTML = formatter.format(tarifs[currentTarif + '+']()) + '<span> / ' + parseFloat(period) + ' мес.</span>';
       ndflSpan.textContent = formatter.format(tarifs[currentTarif + '+']() / period);
-      renameCpationToPlus();
+      renameCaptionToPlus();
     }
 
     if (currentTarif === 'save') {

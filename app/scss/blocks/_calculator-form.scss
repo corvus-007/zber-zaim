@@ -60,6 +60,18 @@ input:checked + .calculator-form__radio-caption {
   cursor: default;
 }
 
+.calculator-form__radio-caption-text:nth-child(2) {
+  display: none;
+}
+
+.calculator-form__radio-caption--plus .calculator-form__radio-caption-text:nth-child(1) {
+  display: none;
+}
+
+.calculator-form__radio-caption--plus .calculator-form__radio-caption-text:nth-child(2) {
+  display: block;
+}
+
 .calculator-form__field {
   position: relative;
   max-width: rem(300);
