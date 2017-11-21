@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  var REFINANCING_RATE = 8.5;
+  var REFINANCING_RATE = 8.25;
   var NDFL = 0.35;
   var monthSlider = document.querySelector('#month-slider');
   var startRange = 3;
@@ -240,6 +240,19 @@ document.addEventListener('DOMContentLoaded', function () {
     var percentage = null;
 
     if (period == 3) {
+      percentage = 10;
+    } else if (period == 6) {
+      percentage = 11;
+    } else if (period == 12) {
+      percentage = 12;
+    }
+    return ((amountValue * percentage) / 100) / 12 * period;
+  }
+
+  function calculateMonthsPlus() {
+    var percentage = null;
+
+    if (period == 3) {
       percentage = 11;
     } else if (period == 6) {
       percentage = 12;
@@ -249,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
     return ((amountValue * percentage) / 100) / 12 * period;
   }
 
-  function calculateMonthsPlus() {
+  function calculateSber() {
     var percentage = null;
 
     if (period == 3) {
@@ -258,19 +271,6 @@ document.addEventListener('DOMContentLoaded', function () {
       percentage = 13;
     } else if (period == 12) {
       percentage = 14;
-    }
-    return ((amountValue * percentage) / 100) / 12 * period;
-  }
-
-  function calculateSber() {
-    var percentage = null;
-
-    if (period == 3) {
-      percentage = 13;
-    } else if (period == 6) {
-      percentage = 14;
-    } else if (period == 12) {
-      percentage = 15;
     }
 
     if (period == 3) {
@@ -284,11 +284,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var percentage = null;
 
     if (period == 3) {
-      percentage = 14;
+      percentage = 13;
     } else if (period == 6) {
-      percentage = 15;
+      percentage = 14;
     } else if (period == 12) {
-      percentage = 16;
+      percentage = 15;
     }
 
     return ((amountValue * percentage) / 100) / 12 * period - ((((percentage - (REFINANCING_RATE + 5)) * amountValue / 100) * NDFL) / 12 * period);
