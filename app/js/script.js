@@ -188,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 
-  var REFINANCING_RATE = 8.25;
+  var REFINANCING_RATE = 7.75;
   var NDFL = 0.35;
   var monthSlider = document.querySelector('#month-slider');
   var startRange = 3;
@@ -240,11 +240,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var percentage = null;
 
     if (period == 3) {
-      percentage = 10;
+      percentage = 8;
     } else if (period == 6) {
-      percentage = 11;
+      percentage = 9;
     } else if (period == 12) {
-      percentage = 12;
+      percentage = 10;
     }
     return ((amountValue * percentage) / 100) / 12 * period;
   }
@@ -253,11 +253,11 @@ document.addEventListener('DOMContentLoaded', function () {
     var percentage = null;
 
     if (period == 3) {
-      percentage = 11;
+      percentage = 9;
     } else if (period == 6) {
-      percentage = 12;
+      percentage = 10;
     } else if (period == 12) {
-      percentage = 13;
+      percentage = 11;
     }
     return ((amountValue * percentage) / 100) / 12 * period;
   }
@@ -266,29 +266,29 @@ document.addEventListener('DOMContentLoaded', function () {
     var percentage = null;
 
     if (period == 3) {
-      percentage = 12;
+      percentage = 10;
     } else if (period == 6) {
-      percentage = 13;
+      percentage = 11;
     } else if (period == 12) {
-      percentage = 14;
+      percentage = 12;
     }
 
-    if (period == 3) {
-      return ((amountValue * percentage) / 100) / 12 * period;
-    } else {
-      return ((amountValue * percentage) / 100) / 12 * period - ((((percentage - (REFINANCING_RATE + 5)) * amountValue / 100) * NDFL) / 12 * period);
-    }
+    // if (period == 3) {
+    return ((amountValue * percentage) / 100) / 12 * period;
+    // } else {
+    //   return ((amountValue * percentage) / 100) / 12 * period - ((((percentage - (REFINANCING_RATE + 5)) * amountValue / 100) * NDFL) / 12 * period);
+    // }
   }
 
   function calculateSberPlus() {
     var percentage = null;
 
     if (period == 3) {
-      percentage = 13;
+      percentage = 11;
     } else if (period == 6) {
-      percentage = 14;
+      percentage = 12;
     } else if (period == 12) {
-      percentage = 15;
+      percentage = 13;
     }
 
     return ((amountValue * percentage) / 100) / 12 * period - ((((percentage - (REFINANCING_RATE + 5)) * amountValue / 100) * NDFL) / 12 * period);
